@@ -36,9 +36,9 @@ minima:
     date_format: "%b %-d, %Y"
 plugins:
   - jekyll-paginate
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-menus
+  # - jekyll-feed
+  # - jekyll-sitemap
+  # - jekyll-menus
 
 defaults:
     -
