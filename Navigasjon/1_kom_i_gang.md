@@ -6,11 +6,20 @@ permalink: /kom_i_gang.html
 
 Python er et tekstbasert programmeringssspråk på linje med for eksempel Java, JavaScript, C#, MATLAB og mange andre. Det finnes mange måter å komme i gang med programmering i Python på og mange velger nettbaserte løsninger som <a href="https://trinket.io/" target="_blank">Trinket</a> eller <a href="https://repl.it/repls/SmoothPreemptiveFonts#main.py" target="_blank">Repl.it</a>. Vi foretrekker å kjøre Python lokalt på egen datamaskin med et egnet redigeringsprogram, fordi et slikt program gir flere muligheter enn en nettbasert løsning og gjør det enklere å feilsøke i koden din.
 
+# Installere Mu for Windows
+<a href="https://codewith.mu/en/" target="_blank">Mu</a> er et enkelt redigeringsprogram for Python som egner seg godt for nybegynnere. Mu har alle de viktigste funksjonene du trenger  for å komme i gang med programmering i Python. 
+
+1. Først må du laste ned installasjonsfilen. Den finner du <a href="https://codewith.mu/en/download" target="_blank">her</a> til både Windows og Mac OS. 
+> Hvis du er usikker på om du har 32-bit eller 64-bit versjon av Windows, finner du en fremgangsmåte for å sjekke hvilken versjon du har på <a href="https://support.microsoft.com/nb-no/windows/vanlige-sp%C3%B8rsm%C3%A5l-om-32-biters-og-64-biters-windows-c6ca9541-8dce-4d48-0415-94a3faa2e13d" target="_blank">denne</a> siden.
+2. Deretter må du kjøre installasjonsfilen. Du kan enten trykke på fila nederst i nettleseren din eller finne den der den er lagret.
+3. Klikk deg gjennom installasjonsveilederen.
+4. Finn Mu i start-menyen og åpne programmet.
+
+
+# Installere Python 3.9 for Windows
 Det er veldig enkelt å installere Python på egen maskin så lenge man gjør det i riktig rekkefølge. Vi har derfor laget en liste over hvordan du går frem og i hvilken rekkefølge det er lurt å installere programmet i.
 
 > Når du har lastet ned installasjonsfilen er det viktig at du husker å huke av der det står «Add Python to PATH». Hvis du ikke gjør det når du gjennomfører installasjonen, er det enkleste å kjøre installasjonsfilen på nytt for å avinstallere og deretter starte på nytt.
-
-# Installere Python 3.9 for Windows
 
 1.  Det første du må gjøre, er å laste ned installasjonsfilen. Klikk på linken som tar deg til <a href="https://www.python.org/downloads/" target="_blank">Python.org</a> og klikk på **Download Python 3.9.0**.
 2.  Gå inn i mappen der du lastet ned installasjonsfilen og åpne den. Filnavnet heter «python 3.9.0-amd64.exe».\
