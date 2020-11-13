@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+pages_workspace.code-workspace
+.vscode/settings.json
+Blogws.code-workspace

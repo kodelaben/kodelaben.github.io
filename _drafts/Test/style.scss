@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(25, 31, 44);
+    flex: auto;
+    height: 100vh;
+}
+
+#logo {
+    align-content: center;
+    top: 50%;
+    position: absolute;
+    left: 20%;
+    fill: white;
+    fill-opacity: 0%;
+    animation: fillFadeIn 0.5s ease-in 30 * 0.15s forwards;
+}
+
+
+
+@for $i from 1 through 27 {
+    #logo path:nth-child(#{$i}) {
+        stroke-dasharray: 100%;
+        stroke-dashoffset: 100%;
+        animation: fadeInAnimation 2s ease-in $i*0.07s forwards;
+    }
+  }
+  
+
+
+@keyframes fadeInAnimation{
+    to {
+        stroke-dashoffset: 0%;
+    }
+}
+
+@keyframes fillFadeIn{
+    to {
+        fill-opacity: 100%;
+    }
+}

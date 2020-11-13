@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Animasjoner i P5JS"
+mathjax: true
+hidden: true
+permalink: /animasjoner/P5JS/
+---
+Her er eksempler på animasjoner som kan lages ved hjelp av P5JS.
+
+<iframe src="https://editor.p5js.org/AndreMartiny/embed/eJo1yPbmP" width="400" height="400" frameBorder="0"></iframe>
+
+
+##
+ Trykk på animasjonene for å se steg for steg hvordan koden er bygd opp.
+
+#### Bubblesort-ish
+<iframe src="https://editor.p5js.org/AndreMartiny/embed/gSG5zKlSN" width="400" height="400" frameBorder="0"></iframe>
+
+#### Bubble-sort
+<iframe src="https://editor.p5js.org/AndreMartiny/embed/3Nq7CxBOI" width="400" height="400" frameBorder="0"></iframe>
