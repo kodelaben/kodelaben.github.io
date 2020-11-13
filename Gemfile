@@ -18,7 +18,7 @@ gem "minima", git: "https://github.com/jekyll/minima"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
 #   gem "jekyll-feed", "~> 0.2.3"
-#   gem "jekyll-sitemap"
+  gem "jekyll-sitemap"
   gem "jekyll-paginate"
 #   gem "jekyll-menus"
 end

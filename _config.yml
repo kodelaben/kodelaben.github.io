@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: M & N 
+title: Kodelaben
 author: Andre Martiny & Henrik Njølstad
 # email: andrem@uia.no & henrik.njolstad@uia.no
 description: >- # this means to ignore newlines until "baseurl:"
@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
-github_username:  uia-mn
+github_username:  kodelaben
 
 # Build settings
 markdown: kramdown
@@ -37,7 +37,7 @@ minima:
 plugins:
   - jekyll-paginate
   # - jekyll-feed
-  # - jekyll-sitemap
+  - jekyll-sitemap
   # - jekyll-menus
 
 defaults:

@@ -437,7 +437,7 @@ $transition-speed: 600ms;
 
 
 
-@for $i from 1 through 27 {
+@for $i from 1 through 9 {
     #logo path:nth-child(#{$i}) {
         stroke-dasharray: 100%;
         stroke-dashoffset: 100%;
