@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Sirkler som ruller"
+title:  "Rullende sirkel"
 mathjax: true
 hidden: true
-permalink: /animasjoner/P5JS/sirkler_som_ruller/
+permalink: /animasjoner/P5JS/rullende_sirkel/
 ---
 I dette eksempelet skal vi forklare hvordan vi har gått frem for å lage animasjonen du ser under. Ved å trykke på animasjonene i de fire stegene, blir du sendt til en ekstern side [P5JS](https://editor.p5js.org/) hvor koden er laget slik at du kan se og endre på koden.
 

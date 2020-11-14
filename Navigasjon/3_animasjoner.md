@@ -13,7 +13,9 @@ permalink: /animasjoner.html
 
 <!-- Under har vi lenket til noen animasjoner. Ved å klikke på lenken blir du sendt til en side hvor vi gjennomgår koden som ligger bak. Dette gjør vi steg for steg slik at man kan forstå hvordan koden er bygd opp. -->
 
-### [Sirkler]({% post_url P5JS/2020-09-30-Sirklersomruller %})
+### [Rullende sirkel]({% post_url P5JS/2020-09-30-Sirklersomruller %})
+
+### [Gangetabell i sirkel]({% post_url P5JS/2020-09-30-Mathologer %}) 
 
 ### [Sortering]({% post_url P5JS/2020-09-30-P5JS %})
 
