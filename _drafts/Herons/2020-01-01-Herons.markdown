@@ -10,7 +10,7 @@ Her kan du se kode som lager løsningsforslag til tilnærmingen av kvadratrøtte
 <summary>Vis kode</summary>
 
 <p>
-{% highlight python %}
+{% highlight python linenos %}
 
     import numpy as np
 

@@ -25,7 +25,7 @@ Vi begynner med å animere et punkt som bever seg rundt sirkelperiferien.
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 
 let tid = 0; // Setter tid til en variabel
 let l = 400; // Lengde på lerret
@@ -66,7 +66,7 @@ Vi ønsker nå å ta idéen fra steg 1 til å animere en sirkel som ruller rundt
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 
 let tid = 0;
 let l = 400;
@@ -115,7 +115,7 @@ For å lage animasjonen trenger vi å spore stien som punktet lager. Det er dett
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 let tid = 0;
 let l = 400;
 let b = 400;
@@ -173,7 +173,7 @@ Til slutt vil vi fjerne alt unøvendig støy, og kun la sporet være igjen. Det 
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 
 let tid = 0;
 let l = 400;
