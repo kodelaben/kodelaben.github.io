@@ -40,6 +40,7 @@ $transition-speed: 600ms;
   background-color: $bg-primary;
   transition: width 600ms ease;
   overflow: none;
+  z-index: 1;
 }
 
 .navbar-nav {
