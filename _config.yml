@@ -30,6 +30,8 @@ github_username:  kodelaben
 
 # Build settings
 markdown: kramdown
+
+
 theme: minima
 minima:
     skin: dark

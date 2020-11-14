@@ -20,7 +20,7 @@ Her har vi skrevet en kode som produserer løsningsforslag til Herons metode. Pr
 <summary>Vis kode</summary>
 
 <p>
-{% highlight python %}
+{% highlight python linenos %}
 {% include vis_kode/herons_metode.py %}
 {% endhighlight %}
 </p>
