@@ -19,7 +19,7 @@ Bak animasjonen ligger det skjult en veldig enkel idé. Animasjonen får vi ved 
 ## Steg 1: 
 <!-- TODO: Denne gifen stemmer ikke med Steg 2 -- Steg 4  -->
 Vi begynner med å animere et punkt som bever seg rundt sirkelperiferien.
-<a href="https://editor.p5js.org/uia-mn/sketches/lc7zWqdzl" target="_blank" > <img  src="/assets/images/Rullende-sirkler/Sirkel.gif" width="50%" > </a>
+<a href="https://editor.p5js.org/uia-mn/sketches/lc7zWqdzl" target="_blank" > <img  src="/assets/images/Rullende-sirkler/dotmedtrace.gif" width="50%" > </a>
 
 <details>
 Denne koden er skrevet i JavaScript.
@@ -58,7 +58,8 @@ function draw() {
 
 Vi ønsker nå å ta idéen fra steg 1 til å animere en sirkel som ruller rundt i sirkelen, med ett punkt som er markert. 
 
-<a href="https://editor.p5js.org/AndreMartiny/sketches/uX7lQzMFY" taget="_blank"><img src="/assets/images/Rullende-sirkler/rullsirkel-ikkebra.gif" ></a>
+<a href="https://editor.p5js.org/AndreMartiny/sketches/uX7lQzMFY" taget="_blank"><img src="/assets/images/Rullende-sirkler/rullendesirkel.gif" width="50%"></a>
+
 
 
 
@@ -107,7 +108,7 @@ function draw() {
 
 For å lage animasjonen trenger vi å spore stien som punktet lager. Det er dette vi har gjort under.
 
-<a href="https://editor.p5js.org/AndreMartiny/sketches/2nAFMnBzI" target="_blank" ><img src="/assets/images/Rullende-sirkler/rullmedtrace.gif" > </a>
+<a href="https://editor.p5js.org/AndreMartiny/sketches/2nAFMnBzI" target="_blank" ><img src="/assets/images/Rullende-sirkler/rullendesirkelmedtrace.gif" > </a>
 
 
 

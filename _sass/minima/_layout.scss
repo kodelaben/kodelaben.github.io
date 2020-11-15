@@ -40,6 +40,7 @@ $transition-speed: 600ms;
   background-color: $bg-primary;
   transition: width 600ms ease;
   overflow: none;
+  z-index: 1;
 }
 
 .navbar-nav {
@@ -303,6 +304,8 @@ $transition-speed: 600ms;
   @include relative-font-size(0.9375);
   color: $brand-color;
   margin-left: 5rem;
+  white-space: initial;
+
 }
 
 .footer-col {
