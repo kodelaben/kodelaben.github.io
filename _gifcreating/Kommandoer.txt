@@ -1,5 +1,7 @@
 For å gå gjennom alle png-bildene i en mappe bruk:
+
 magick convert  -delay 2 -loop 0 *.png output.gif
+
 magick convert  -delay 2 -loop 0 *.jpg output.gif
 
 
@@ -21,10 +23,19 @@ magick convert *.png -set delay 2 -reverse *.png -set delay 2 -loop 0 animation.
 	
 setup ()
 frameRate(5) eller mindre...!!!!!
-
-  if(frameCount <= 180){
-    console.log('loop is done');
-    save( "myproject-frame-" + frameCount + ".png")
+ 
+  if (frameCount <= 300) {    
+    let filenumber = "";     // vil ha like mange sifre når vi indekserer filnavnene
+    if (frameCount < 10) {
+      filenumber += "000" + frameCount;
+    } else if (frameCount < 100) {
+      filenumber += "00" + frameCount;
+    } else if (frameCount < 1000) {
+      filenumber += "0" + frameCount;
+    } else {
+      filenumber += frameCount;
+    }
+    save("rullendesirkel-" + filenumber + ".png");
   }
   
 
