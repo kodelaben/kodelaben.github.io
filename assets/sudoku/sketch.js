@@ -8,7 +8,7 @@ function setup() {
   var canvas = createCanvas(størrelse * 9, størrelse * 9);
   canvas.parent('canvasForHTML');
   textSize(30);
-  frameRate(4);
+  frameRate(30);
 
 }
 
@@ -106,6 +106,7 @@ function losning() {
         }
         brett[z][w] = 0;
         øksisteindeks(w, z);
+        return;
       }
     }
   }
