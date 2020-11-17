@@ -104,7 +104,7 @@ function losning() {
             return;
           }
         }
-        brett[z][w] = 0;
+        // brett[z][w] = 0;
         øksisteindeks(w, z);
         return;
       }
@@ -112,42 +112,29 @@ function losning() {
   }
 }
 
-function øksisteindeks(x, y) {
+function øksisteindeks(x, y) { // TODO: Gjør indeksskifte med moduloregning. 
   let skiftey = y;
   let skiftex = x;
   if (x == 0) {
     skiftey -= 1;
     skiftex = 8;
-    if (brett[skiftey][skiftex] == 9) {
-      brett[skiftey][skiftex] = 0;
-      øksisteindeks(skiftex, skiftey);
-      return;
-    }
-    for (let k = brett[skiftey][skiftex] + 1; k < 10; k++) {
-      if (er_mulig(skiftex, skiftey, k)) {
-        brett[skiftey][skiftex] = k;
-        return;
-      }
-    }
-    brett[skiftey][skiftex] = 0;
-    øksisteindeks(skiftex, skiftey);
-    return;
   }
-  else {
+  else { 
     skiftex -= 1;
-    if (brett[skiftey][skiftex] == 9) {
-      brett[skiftey][skiftex] = 0;
-      øksisteindeks(skiftex, skiftey);
-      return;
-    }
-    for (let k = brett[skiftey][skiftex] + 1; k < 10; k++) {
-      if (er_mulig(skiftex, skiftey, k)) {
-        brett[skiftey][skiftex] = k;
-        return;
-      }
-    }
+  }
+  // if -> Sjekk om forhåndsdefinert brett røres.
+  if (brett[skiftey][skiftex] == 9) {
     brett[skiftey][skiftex] = 0;
     øksisteindeks(skiftex, skiftey);
     return;
   }
+  for (let k = brett[skiftey][skiftex] + 1; k < 10; k++) {
+    if (er_mulig(skiftex, skiftey, k)) {
+      brett[skiftey][skiftex] = k;
+      return;
+    }
+  }
+  brett[skiftey][skiftex] = 0;
+  øksisteindeks(skiftex, skiftey);
+  return;
 }
