@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Sirkler som ruller"
+title:  "Rullende sirkel"
 mathjax: true
 hidden: true
-permalink: /animasjoner/P5JS/sirkler_som_ruller/
+permalink: /animasjoner/P5JS/rullende_sirkel/
 ---
 I dette eksempelet skal vi forklare hvordan vi har gått frem for å lage animasjonen du ser under. Ved å trykke på animasjonene i de fire stegene, blir du sendt til en ekstern side [P5JS](https://editor.p5js.org/) hvor koden er laget slik at du kan se og endre på koden.
 
@@ -19,13 +19,13 @@ Bak animasjonen ligger det skjult en veldig enkel idé. Animasjonen får vi ved 
 ## Steg 1: 
 <!-- TODO: Denne gifen stemmer ikke med Steg 2 -- Steg 4  -->
 Vi begynner med å animere et punkt som bever seg rundt sirkelperiferien.
-<a href="https://editor.p5js.org/uia-mn/sketches/lc7zWqdzl" target="_blank" > <img  src="/assets/images/Rullende-sirkler/Sirkel.gif" width="50%" > </a>
+<a href="https://editor.p5js.org/uia-mn/sketches/lc7zWqdzl" target="_blank" > <img  src="/assets/images/Rullende-sirkler/dotmedtrace.gif" width="50%" > </a>
 
 <details>
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 
 let tid = 0; // Setter tid til en variabel
 let l = 400; // Lengde på lerret
@@ -58,7 +58,8 @@ function draw() {
 
 Vi ønsker nå å ta idéen fra steg 1 til å animere en sirkel som ruller rundt i sirkelen, med ett punkt som er markert. 
 
-<a href="https://editor.p5js.org/AndreMartiny/sketches/uX7lQzMFY" taget="_blank"><img src="/assets/images/Rullende-sirkler/rullsirkel-ikkebra.gif" ></a>
+<a href="https://editor.p5js.org/AndreMartiny/sketches/uX7lQzMFY" taget="_blank"><img src="/assets/images/Rullende-sirkler/rullendesirkel.gif" width="50%"></a>
+
 
 
 
@@ -66,7 +67,7 @@ Vi ønsker nå å ta idéen fra steg 1 til å animere en sirkel som ruller rundt
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 
 let tid = 0;
 let l = 400;
@@ -107,7 +108,7 @@ function draw() {
 
 For å lage animasjonen trenger vi å spore stien som punktet lager. Det er dette vi har gjort under.
 
-<a href="https://editor.p5js.org/AndreMartiny/sketches/2nAFMnBzI" target="_blank" ><img src="/assets/images/Rullende-sirkler/rullmedtrace.gif" > </a>
+<a href="https://editor.p5js.org/AndreMartiny/sketches/2nAFMnBzI" target="_blank" ><img src="/assets/images/Rullende-sirkler/rullendesirkelmedtrace.gif" > </a>
 
 
 
@@ -115,7 +116,7 @@ For å lage animasjonen trenger vi å spore stien som punktet lager. Det er dett
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 let tid = 0;
 let l = 400;
 let b = 400;
@@ -173,7 +174,7 @@ Til slutt vil vi fjerne alt unøvendig støy, og kun la sporet være igjen. Det 
 Denne koden er skrevet i JavaScript.
  
 <summary>Se kode:</summary>
-{% highlight javascript lineos=table %}
+{% highlight javascript linenos %}
 
 let tid = 0;
 let l = 400;

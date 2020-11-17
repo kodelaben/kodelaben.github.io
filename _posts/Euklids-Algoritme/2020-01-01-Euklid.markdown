@@ -8,15 +8,15 @@ permalink: /matematiske_problemer/euklids_algoritme.html
 
 Her kan du se en kode som produserer løsningsforslag til Euklids algoritme for å først finne største felles multiplum mellom to tall og deretter bruke dette til å løse diofantiske likninger av typen \\(ax + by = 1\\).
 
-<details>
+<!-- <details>
 <summary>Vis kode</summary>
-<p>
-{% highlight python %}
+<p> -->
+{% highlight python linenos %}
 {% include vis_kode/euklids_algoritme.py %}
 {% endhighlight %}
-</p>
+<!-- </p>
 
-</details>
+</details> -->
 
 <details >
 <summary>Prøv koden</summary>
