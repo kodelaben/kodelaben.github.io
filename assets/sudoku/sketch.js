@@ -3,13 +3,13 @@ let bufferx = -8;
 let buffery = 10;
 let xpos = størrelse / 2 + bufferx;
 let ypos = størrelse / 2 + buffery;
+let pause = 1;
 
 function setup() {
   var canvas = createCanvas(størrelse * 9, størrelse * 9);
-  canvas.parent('canvasForHTML');
+  canvas.parent("canvasForHTML");
   textSize(30);
   frameRate(30);
-
 }
 
 function draw() {
@@ -18,7 +18,9 @@ function draw() {
   strokeWeight(0);
   fill(255);
   tegn_brett();
-  losning();
+  if ((pause == 0)) {
+    losning();
+  }
 }
 
 function grid() {
@@ -56,12 +58,15 @@ function tegn_brett() {
 }
 
 function er_mulig(x, y, n) {
-  if (sjekk_rad(x, y, n) == false || sjekk_kol(x, y, n) == false || sjekk_boks(x, y, n) == false) {
+  if (
+    sjekk_rad(x, y, n) == false ||
+    sjekk_kol(x, y, n) == false ||
+    sjekk_boks(x, y, n) == false
+  ) {
     return false;
   }
   return true;
 }
-
 
 function sjekk_rad(x, y, n) {
   for (let i = 0; i < 9; i++) {
@@ -112,14 +117,14 @@ function losning() {
   }
 }
 
-function øksisteindeks(x, y) { // TODO: Gjør indeksskifte med moduloregning. 
+function øksisteindeks(x, y) {
+  // TODO: Gjør indeksskifte med moduloregning.
   let skiftey = y;
   let skiftex = x;
   if (x == 0) {
     skiftey -= 1;
     skiftex = 8;
-  }
-  else { 
+  } else {
     skiftex -= 1;
   }
   // if -> Sjekk om forhåndsdefinert brett røres.
@@ -137,4 +142,8 @@ function øksisteindeks(x, y) { // TODO: Gjør indeksskifte med moduloregning.
   brett[skiftey][skiftex] = 0;
   øksisteindeks(skiftex, skiftey);
   return;
+}
+
+function unpause() {
+    pause = (pause + 1 ) % 2;
 }
