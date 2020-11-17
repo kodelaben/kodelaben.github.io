@@ -4,7 +4,9 @@ title: Kom i gang med Python
 permalink: /kom_i_gang.html
 ---
 
-Python er et tekstbasert programmeringssspråk på linje med for eksempel Java, JavaScript, C#, MATLAB og mange andre. Det finnes mange måter å komme i gang med programmering i Python på og mange velger nettbaserte løsninger som <a href="https://trinket.io/" target="_blank">Trinket</a> eller <a href="https://repl.it/repls/SmoothPreemptiveFonts#main.py" target="_blank">Repl.it</a>. Vi foretrekker å kjøre Python lokalt på egen datamaskin med et egnet redigeringsprogram, fordi et slikt program gir flere muligheter enn en nettbasert løsning og gjør det enklere å feilsøke i koden din.
+Python er et tekstbasert programmeringssspråk på linje med for eksempel Java, JavaScript, C#, MATLAB og mange andre. Det finnes mange måter å komme i gang med programmering i Python på og mange velger nettbaserte løsninger som <a href="https://trinket.io/" target="_blank">Trinket</a> eller <a href="https://repl.it/repls/SmoothPreemptiveFonts#main.py" target="_blank">Repl.it</a>. 
+
+<!-- Vi foretrekker å kjøre Python lokalt på egen datamaskin med et egnet redigeringsprogram, fordi et slikt program gir flere muligheter enn en nettbasert løsning og gjør det enklere å feilsøke i koden din. -->
 
 # Installere Mu for Windows
 <a href="https://codewith.mu/en/" target="_blank">Mu</a> er et enkelt redigeringsprogram for Python som egner seg godt for nybegynnere. Mu har alle de viktigste funksjonene du trenger  for å komme i gang med programmering i Python. 
