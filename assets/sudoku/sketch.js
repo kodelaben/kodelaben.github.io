@@ -5,7 +5,8 @@ let xpos = størrelse / 2 + bufferx;
 let ypos = størrelse / 2 + buffery;
 
 function setup() {
-  createCanvas(størrelse * 9, størrelse * 9);
+  var canvas = createCanvas(størrelse * 9, størrelse * 9);
+  canvas.parent('canvasForHTML');
   textSize(30);
   frameRate(4);
 
