@@ -12,3 +12,4 @@ På denne siden finner du lenker til ulike prosjekter som vi har holdt på med.
  
 ## [Snake]({% post_url Storre-prosjekter/Snake/2020-10-10-snake %}) 
  
+## [Sudoku]({% post_url Storre-prosjekter/Sudoku/2020-11-17-sudoku %})
