@@ -51,5 +51,7 @@ $on-large: $on-laptop !default;
   // Defines element resets.
   "minima/layout",
   // Defines structure and style based on CSS selectors.
-  "minima/custom-styles" // Hook to override existing styles.
+  "minima/custom-styles", // Hook to override existing styles.
+  "user_defined/sudoku",
+  "user_defined/scroll_bars"
 ;

@@ -1,0 +1,43 @@
+
+
+.sudokuoverlay {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+
+.sudoku {
+    background-color: black;
+    width: 360px;
+    height: 360px;
+    display: grid;
+    grid-template-columns: 360px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px ;
+  }
+  .sudokuboks {
+    width: 360px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    grid-template-columns: 33px 33px 33px;
+    justify-self: center;
+    align-self: center;
+    column-gap: 1px;
+  }
+  
+  .input {
+      font-weight: bold;
+      font-size: 20px;
+      width: 39px;
+      height: 39px;
+      border: none;
+      padding: 0px;
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      color: rgb(194, 194, 194);
+      background-color: rgb(66, 66, 66);
+  }
