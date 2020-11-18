@@ -1,5 +1,12 @@
 
-  
+.sudokuoverlay {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+
   .sudoku {
     background-color: black;
     width: 360px;
@@ -41,7 +48,7 @@
     -ms-flex-item-align: center;
         align-self: center;
     text-align: center;
-    color: #c2c2c2;
-    background-color: #424242;
+    color: rgb(194, 194, 194);
+    background-color: rgb(66, 66, 66);
   }
   /*# sourceMappingURL=style.css.map */

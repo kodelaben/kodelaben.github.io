@@ -1,19 +1,22 @@
 let størrelse = 40;
-let bufferx = -8;
-let buffery = 10;
+let bufferx = -6;
+let buffery = 8;
 let xpos = størrelse / 2 + bufferx;
 let ypos = størrelse / 2 + buffery;
 let pause = 1;
+let umulig = false;
+let brettkopi;
 
 function setup() {
   var canvas = createCanvas(størrelse * 9, størrelse * 9);
   canvas.parent("canvasForHTML");
-  textSize(30);
-  frameRate(30);
+  frameRate(50);
+  brettkopi = kopier_brett();
 }
 
 function draw() {
-  background(0);
+  textSize(20);
+  background(66, 66, 66);
   grid();
   strokeWeight(0);
   fill(255);
@@ -21,18 +24,23 @@ function draw() {
   if ((pause == 0)) {
     losning();
   }
+  if (umulig)
+  {
+    textSize(60);
+    text("UMULIG!", 0, height/2);
+  }
 }
 
 function grid() {
-  stroke(200);
-  strokeWeight(3);
+  stroke(0);
+  strokeWeight(1);
   for (let i = 0; i < 10; i++) {
     line(i * størrelse, 0, i * størrelse, height);
     line(0, i * størrelse, width, i * størrelse);
   }
   for (let i = 1; i < 3; i++) {
     // stroke(150,0,0);
-    strokeWeight(6);
+    strokeWeight(2);
     line(i * 3 * størrelse, 0, i * 3 * størrelse, height);
     line(0, i * 3 * størrelse, width, i * 3 * størrelse);
   }
@@ -48,6 +56,7 @@ for (let i = 0; i < 9; i++) {
 }
 
 function tegn_brett() {
+  fill(194, 194, 194);
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (brett[j][i] != 0) {
@@ -127,16 +136,26 @@ function øksisteindeks(x, y) {
   } else {
     skiftex -= 1;
   }
-  // if -> Sjekk om forhåndsdefinert brett røres.
-  if (brett[skiftey][skiftex] == 9) {
+  if (skiftex < 0 || skiftey < 0) {
+    umulig = true;
+    pause = 1;
+    return;
+  }
+  else if (brettkopi[skiftey][skiftex] != 0) {
+    øksisteindeks(skiftex, skiftey);
+    return;
+  }
+  else if (brett[skiftey][skiftex] == 9) {
     brett[skiftey][skiftex] = 0;
     øksisteindeks(skiftex, skiftey);
     return;
   }
-  for (let k = brett[skiftey][skiftex] + 1; k < 10; k++) {
-    if (er_mulig(skiftex, skiftey, k)) {
-      brett[skiftey][skiftex] = k;
-      return;
+  else {
+    for (let k = brett[skiftey][skiftex] + 1; k < 10; k++) {
+      if (er_mulig(skiftex, skiftey, k)) {
+        brett[skiftey][skiftex] = k;
+        return;
+      }
     }
   }
   brett[skiftey][skiftex] = 0;
@@ -145,5 +164,28 @@ function øksisteindeks(x, y) {
 }
 
 function unpause() {
-    pause = (pause + 1 ) % 2;
+  pause = (pause + 1) % 2;
+}
+
+function tom_brett() {
+  let htmlbrett = document.getElementById("sudokubrett");
+  for (let i = 0; i < 9; i++) {
+    let sudokurad = htmlbrett.childNodes[2 * i + 1];
+    for (let j = 0; j < 9; j++) {
+      sudokurad.childNodes[2 * j + 1].childNodes[0].value = "";
+    }
+  }
+}
+
+
+function kopier_brett() {
+  dummy = [];
+  for (let i = 0; i < 9; i++) {
+    let dummyarray = [];
+    for (let j = 0; j < 9; j++) {
+      dummyarray.push(brett[i][j]);
+    }
+    dummy.push(dummyarray);
+  }
+  return dummy
 }

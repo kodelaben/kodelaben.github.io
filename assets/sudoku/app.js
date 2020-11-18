@@ -11,6 +11,10 @@ function flyttogfyll() {
       }
     }
   }
+  brettkopi = kopier_brett();
+  umulig = false;
 }
 
 flyttogfyll();
+
+
