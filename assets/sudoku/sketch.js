@@ -6,29 +6,31 @@ let ypos = størrelse / 2 + buffery;
 let pause = 1;
 let umulig = false;
 let brettkopi;
+let fps = 50;
 
 function setup() {
   var canvas = createCanvas(størrelse * 9, størrelse * 9);
   canvas.parent("canvasForHTML");
-  frameRate(50);
   brettkopi = kopier_brett();
 }
 
 function draw() {
-  textSize(20);
-  background(66, 66, 66);
-  grid();
-  strokeWeight(0);
-  fill(255);
-  tegn_brett();
-  if ((pause == 0)) {
-    losning();
-  }
-  if (umulig)
-  {
-    textSize(60);
-    text("UMULIG!", 0, height/2);
-  }
+  if (frameCount % floor((51-fps/2)) == 0)
+{  
+textSize(20);
+background(66, 66, 66);
+grid();
+strokeWeight(0);
+fill(255);
+tegn_brett();
+if ((pause == 0)) {
+  losning();
+}
+if (umulig)
+{
+  textSize(60);
+  text("UMULIG!", 0, height/2);
+}}
 }
 
 function grid() {

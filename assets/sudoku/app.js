@@ -13,6 +13,7 @@ function flyttogfyll() {
   }
   brettkopi = kopier_brett();
   umulig = false;
+  pause = 1;
 }
 
 flyttogfyll();
