@@ -45,3 +45,26 @@
     border: none;
   }
 }
+
+
+.sudokuinput1 {
+    font-weight: bold;
+    font-size: 20px;
+    width: 39px;
+    height: 39px;
+    border: none;
+    padding: 0px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    color: rgb(194, 194, 194);
+    background-color: rgb(54, 54, 54);
+    &:hover {
+      background-color: rgb(34, 34, 34);
+    }
+    &:focus {
+      background-color: rgb(34, 34, 34);
+      border: none;
+    }
+  }
