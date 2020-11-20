@@ -16,6 +16,6 @@ function flyttogfyll() {
   pause = 1;
 }
 
-flyttogfyll();
+// flyttogfyll();
 
 

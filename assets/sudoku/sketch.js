@@ -6,7 +6,7 @@ let ypos = størrelse / 2 + buffery;
 let pause = 1;
 let umulig = false;
 let brettkopi;
-let fps = 50;
+let fps = 100;
 
 function setup() {
   var canvas = createCanvas(størrelse * 9, størrelse * 9);
@@ -15,34 +15,39 @@ function setup() {
 }
 
 function draw() {
-  if (frameCount % floor((51-fps/2)) == 0)
-{  
-textSize(20);
-background(66, 66, 66);
-grid();
-strokeWeight(0);
-fill(255);
-tegn_brett();
-if ((pause == 0)) {
-  losning();
-}
-if (umulig)
-{
-  textSize(60);
-  text("UMULIG!", 0, height/2);
-}}
+  if (frameCount % floor((51 - fps / 2)) == 0) {
+    textSize(20);
+    background(54);
+    fill(66);
+    noStroke();
+    square(3 * størrelse, 0, 3 * størrelse);
+    square(3 * størrelse, height - 3 * størrelse, 3 * størrelse);
+    square(0, 3 * størrelse, 3 * størrelse);
+    square(6 * størrelse, 3 * størrelse, 3 * størrelse);
+    grid();
+    strokeWeight(0);
+    fill(255);
+    tegn_brett();
+    if ((pause == 0)) {
+      losning();
+    }
+    if (umulig) {
+      textSize(60);
+      text("UMULIG!", 0, height / 2);
+    }
+  }
 }
 
 function grid() {
   stroke(0);
-  strokeWeight(1);
+  strokeWeight(.5);
   for (let i = 0; i < 10; i++) {
     line(i * størrelse, 0, i * størrelse, height);
     line(0, i * størrelse, width, i * størrelse);
   }
   for (let i = 1; i < 3; i++) {
     // stroke(150,0,0);
-    strokeWeight(2);
+    strokeWeight(.5);
     line(i * 3 * størrelse, 0, i * 3 * størrelse, height);
     line(0, i * 3 * størrelse, width, i * 3 * størrelse);
   }
@@ -62,10 +67,17 @@ function tegn_brett() {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (brett[j][i] != 0) {
-        text(brett[j][i], i * størrelse + xpos, j * størrelse + ypos);
+        if (brett[j][i] == brettkopi[j][i]) {
+          fill(76, 175, 80);
+          text(brett[j][i], i * størrelse + xpos, j * størrelse + ypos);
+          fill(194, 194, 194);
+        }
+        else {
+          text(brett[j][i], i * størrelse + xpos, j * størrelse + ypos);
+        }
       }
     }
-  }
+  }  //
 }
 
 function er_mulig(x, y, n) {
