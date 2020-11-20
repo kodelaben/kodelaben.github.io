@@ -1,6 +1,6 @@
-let bredde = 2 ** 5;
+let bredde = 2 ** 10;
 let høyde = 400;
-let antall = 2 ** 3;
+let antall = 2 ** 8;
 let søyler = [];
 let buffer = 2;
 let linjebredde = bredde / antall;
@@ -28,9 +28,9 @@ for (let i = 0; i < antall; i++) {
   søyler.push(i);
 }
 
-søyler = shuffle(søyler);
+søyler = shufflearray(søyler);
 
-function shuffle(array) {
+function shufflearray(array) {
   var m = array.length,
     t,
     i;
@@ -48,38 +48,43 @@ function shuffle(array) {
 
   return array;
 }
-
 function merge_sort(array) {
+  let venstre;
+  let høyre;
   let lengde = array.length;
   let midtpunkt = Math.floor(lengde / 2);
+  let resultat;
   if (lengde <= 1) {
     return array;
-  } else {
-    dummyvenstre = array
-    dummyvenstre = array.slice(0, midtpunkt);
-    dummyhøyre = array.slice(midtpunkt);
-    venstre = merge_sort(dummyvenstre);
-    høyre = merge_sort(dummyhøyre);
   }
-  let resulatet_sortert = [];
-  for (let i = 0; i < lengde; i++) {
-    if (venstre.length > 0 && høyre.length > 0) {
-      if (venstre[0] <= høyre[0]) {
-        resulatet_sortert.push(venstre[0]);
-        venstre.splice(0, 1);
+  venstre = merge_sort(array.slice(0, midtpunkt));
+  høyre = merge_sort(array.slice(midtpunkt));
+  resultat = merge(venstre, høyre);
+  return resultat;
+}
+
+function merge(arr1, arr2) {
+  let len1 = arr1.length;
+  let len2 = arr2.length;
+  let sortert = [];
+  for (let i = 0; i < len1 + len2; i++) {
+    if (arr1.length > 0 && arr2.length > 0) {
+      if (arr1[0] <= arr2[0]) {
+        sortert.push(arr1[0]);
+        arr1.shift();
       } else {
-        resulatet_sortert.push(høyre[0]);
-        høyre.splice(0, 1);
+        sortert.push(arr2[0]);
+        arr2.shift();
       }
-    } else if (høyre.length == 0) {
-      resulatet_sortert.push(venstre[0]);
-      venstre.splice(0, 1);
+    } else if (arr1.length > 0) {
+      sortert.push(arr1[0]);
+      arr1.shift();
     } else {
-      resulatet_sortert.push(høyre[0]);
-      høyre.splice(0, 1);
+      sortert.push(arr2[0]);
+      arr2.shift();
     }
   }
-  return resulatet_sortert;
+  return sortert;
 }
 
 søyler = merge_sort(søyler);
