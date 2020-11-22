@@ -6,6 +6,7 @@ let søyler = [];
 let buffer = 2;
 let linjebredde = bredde / antall;
 let counter = 0;
+let nivå = 0;
 let referencearray = [];
 let sorteringsarray = [];
 let antallSammenligninger = antall / 2;
@@ -13,23 +14,37 @@ let antallSammenligninger = antall / 2;
 function setup() {
   var canvas = createCanvas(bredde, høyde);
   canvas.parent("canvasForHTML");
-  frameRate(30);
+  frameRate(60);
 }
 
 function draw() {
   background(0);
   tegnsøyler();
+  byttsøyler(nivå, counter);
+  counter ++;
+  if (counter == antall)
+  {
+      nivå ++;
+      counter = 0;
+  }
+  if (nivå == potens){
+      noLoop();
+  }
+
 }
 
 function tegnsøyler() {
   for (let i = 0; i < antall; i++) {
     stroke("red");
-    strokeWeight(linjebredde);
+    if (i == counter) {
+        stroke("green");
+    }
+    strokeWeight(linjebredde*0.99);
     line(
-      linjebredde * søyler[i] + buffer,
+      linjebredde * i + buffer,
       height,
-      linjebredde * søyler[i] + buffer,
-      height - i
+      linjebredde  * i + buffer,
+      height - søyler[i]*1.5
     );
   }
 }
@@ -104,7 +119,7 @@ function merge(arr1, arr2) {
         indeksvenstre ++;
       } else {
         sortert.push(arr2[indekshøyre]);
-        indekshøyre;
+        indekshøyre++;
       }
     }
     return sortert;
@@ -112,6 +127,12 @@ function merge(arr1, arr2) {
 
 create_merging_history();
 
+function byttsøyler(level, teller) {
+    let størrlesepålistene = 2**(level+1);
+    let indeksIlisten = teller % størrlesepålistene;
+    let listeindeks = (teller -indeksIlisten)/størrlesepålistene;
+    søyler[teller] = sorteringsarray[potens - level-1][listeindeks][indeksIlisten];
+}
 
 
 
