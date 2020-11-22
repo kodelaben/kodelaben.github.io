@@ -1,6 +1,6 @@
 let bredde = 2 ** 10;
 let høyde = 400;
-let potens = 8;
+let potens = 6;
 let antall = 2 ** potens;
 let søyler = [];
 let buffer = 2;
@@ -10,41 +10,50 @@ let nivå = 0;
 let referencearray = [];
 let sorteringsarray = [];
 let antallSammenligninger = antall / 2;
+let nestelistedelay = 0;
 
 function setup() {
   var canvas = createCanvas(bredde, høyde);
   canvas.parent("canvasForHTML");
-  frameRate(60);
+  frameRate(5);
 }
 
 function draw() {
   background(0);
   tegnsøyler();
   byttsøyler(nivå, counter);
-  counter ++;
-  if (counter == antall)
-  {
-      nivå ++;
-      counter = 0;
+  counter++;
+  if (counter == antall) {
+    nivå++;
+    counter = 0;
   }
-  if (nivå == potens){
-      noLoop();
+  if (nivå == potens) {
+    noLoop();
+    redraw();
   }
-
 }
 
 function tegnsøyler() {
+  let størrlesepålistene = 2 ** (nivå + 1);
+  let indeksIlisten = counter % størrlesepålistene;
+  let listeindeks = (counter - indeksIlisten) / størrlesepålistene;
   for (let i = 0; i < antall; i++) {
-    stroke("red");
-    if (i == counter) {
-        stroke("green");
+    stroke(47, 214, 136);
+    if (
+      i >= listeindeks * størrlesepålistene &&
+      i < (listeindeks + 1) * størrlesepålistene
+    ) {
+      stroke("blue");
+      if (i == counter) {
+        stroke("red");
+      }
     }
-    strokeWeight(linjebredde*0.99);
+    strokeWeight(linjebredde * 0.95);
     line(
       linjebredde * i + buffer,
       height,
-      linjebredde  * i + buffer,
-      height - søyler[i]*1.5
+      linjebredde * i + buffer,
+      height - søyler[i] * 1.5*4
     );
   }
 }
@@ -68,9 +77,6 @@ function shufflearray(array) {
   return array;
 }
 
-
-
-
 for (let i = 0; i < antall; i++) {
   søyler.push(i);
 }
@@ -84,127 +90,55 @@ sorteringsarray.push(referencearray);
 
 function create_merged_array(listoflists, listlength) {
   let dummyarray = [];
-  for (let j = 0; j < listlength/2; j++) {
+  for (let j = 0; j < listlength / 2; j++) {
     dummyarray.push(merge(listoflists[2 * j], listoflists[2 * j + 1]));
   }
   return dummyarray;
 }
 
-
-function create_merging_history()
-{
-    for (let i = 0; i < potens; i++)
-    {
-        sorteringsarray.unshift(create_merged_array(sorteringsarray[0], sorteringsarray[0].length));
-    }
+function create_merging_history() {
+  for (let i = 0; i < potens; i++) {
+    sorteringsarray.unshift(
+      create_merged_array(sorteringsarray[0], sorteringsarray[0].length)
+    );
+  }
 }
 
 function merge(arr1, arr2) {
-    let len1 = arr1.length;
-    let len2 = arr2.length;
-    let sortert = [];
-    let indeksvenstre = 0;
-    let indekshøyre = 0;
-    for (let i = 0; i < len1 + len2; i++) {
-      if (arr1.length - indeksvenstre > 0 && arr2.length-indekshøyre > 0) {
-        if (arr1[indeksvenstre] <= arr2[indekshøyre]) {
-          sortert.push(arr1[indeksvenstre]);
-          indeksvenstre ++;
-        } else {
-          sortert.push(arr2[indekshøyre]);
-          indekshøyre ++;
-        }
-      } else if (arr1.length - indeksvenstre > 0) {
+  let len1 = arr1.length;
+  let len2 = arr2.length;
+  let sortert = [];
+  let indeksvenstre = 0;
+  let indekshøyre = 0;
+  for (let i = 0; i < len1 + len2; i++) {
+    if (arr1.length - indeksvenstre > 0 && arr2.length - indekshøyre > 0) {
+      if (arr1[indeksvenstre] <= arr2[indekshøyre]) {
         sortert.push(arr1[indeksvenstre]);
-        indeksvenstre ++;
+        indeksvenstre++;
       } else {
         sortert.push(arr2[indekshøyre]);
         indekshøyre++;
       }
+    } else if (arr1.length - indeksvenstre > 0) {
+      sortert.push(arr1[indeksvenstre]);
+      indeksvenstre++;
+    } else {
+      sortert.push(arr2[indekshøyre]);
+      indekshøyre++;
     }
-    return sortert;
   }
+  return sortert;
+}
 
 create_merging_history();
 
 function byttsøyler(level, teller) {
-    let størrlesepålistene = 2**(level+1);
-    let indeksIlisten = teller % størrlesepålistene;
-    let listeindeks = (teller -indeksIlisten)/størrlesepålistene;
-    søyler[teller] = sorteringsarray[potens - level-1][listeindeks][indeksIlisten];
+  let størrlesepålistene = 2 ** (level + 1);
+  let indeksIlisten = teller % størrlesepålistene;
+  let listeindeks = (teller - indeksIlisten) / størrlesepålistene;
+  søyler[teller] =
+    sorteringsarray[potens - level - 1][listeindeks][indeksIlisten];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // function merge_sort(array) {
 //     let venstre;
@@ -220,10 +154,6 @@ function byttsøyler(level, teller) {
 //     resultat = merge(venstre, høyre);
 //     return resultat;
 //   }
-  
-  
-
-
 
 // function merge(arr1, arr2) {
 //     let len1 = arr1.length;
