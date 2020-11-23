@@ -1,9 +1,9 @@
 let bredde = 2 ** 10;
 let høyde = 400;
-let potens = 6;
+let potens = 5;
 let antall = 2 ** potens;
 let søyler = [];
-let buffer = 2;
+let buffer = bredde/antall/2;
 let linjebredde = bredde / antall;
 let counter = 0;
 let nivå = 0;
@@ -28,8 +28,11 @@ function draw() {
     counter = 0;
   }
   if (nivå == potens) {
-    noLoop();
+    background(0);
+    counter = -1;
+    tegnsøyler();
     redraw();
+    noLoop();
   }
 }
 
