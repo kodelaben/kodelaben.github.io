@@ -38,9 +38,20 @@ def generer_alle_delmengder(liste):
         alle_delmengder.append(dummy)
     return alle_delmengder
 
+def generer_alle_delmengder2(liste):
+    alle_delmengder = [[]]
+    for element in liste:
+        dummy = []
+        for current_elements in alle_delmengder:
+            dummy.append(current_elements.copy())
+        for dummyelement in dummy:
+            dummyelement.append(element)
+        alle_delmengder.extend(dummy)
+    return alle_delmengder
+
+
+
 
 testliste2 = ["A", "B", "C"]
-print(testliste2)
+# print(testliste2)
 testliste2 = generer_alle_delmengder(testliste2)
-for element in testliste2:
-    print(element)
