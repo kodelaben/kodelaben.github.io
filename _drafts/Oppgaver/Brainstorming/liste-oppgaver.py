@@ -7,7 +7,7 @@
 #     for i in range(len(liste)):
 #         if liste[i] not in liste_av_unike_elementer:
 #             liste_av_unike_elementer.append(liste[i])
-    
+
 #     return liste_av_unike_elementer
 
 # print(slett_duplikater(testliste))
@@ -16,13 +16,13 @@
 # Skriv et Python program som genererer alle delmengder(underlister) av en liste
 
 # For eksempel er alle delmengdene av [1,2,3] mengdene
-# [], 
-# [1], 
-# [2], 
-# [3], 
-# [1,2], 
-# [1,3], 
-# [2,3], 
+# [],
+# [1],
+# [2],
+# [3],
+# [1,2],
+# [1,3],
+# [2,3],
 # [1,2,3].
 
 def generer_alle_delmengder(liste):
@@ -30,15 +30,16 @@ def generer_alle_delmengder(liste):
     if len(liste) == 0:
         alle_delmengder.append([])
         return alle_delmengder
-    alle_delmengder_uten_siste = generer_alle_delmengder(liste[:-1])
+    alle_delmengder_uten_siste = generer_alle_delmengder(liste[1:])
     alle_delmengder.extend(alle_delmengder_uten_siste)
     for subliste in alle_delmengder_uten_siste:
         dummy = subliste.copy()
-        subliste.append(liste[-1])
+        subliste.insert(0, liste[0])
         alle_delmengder.append(dummy)
     return alle_delmengder
 
-testliste2 = ["A", "B", 1,2]
+
+testliste2 = ["A", "B", "C"]
 print(testliste2)
 testliste2 = generer_alle_delmengder(testliste2)
 for element in testliste2:
