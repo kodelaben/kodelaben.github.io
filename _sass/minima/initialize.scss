@@ -53,5 +53,6 @@ $on-large: $on-laptop !default;
   // Defines structure and style based on CSS selectors.
   "minima/custom-styles", // Hook to override existing styles.
   "user_defined/sudoku",
-  "user_defined/scroll_bars"
+  "user_defined/scroll_bars",
+  "user_defined/user_enviroments"
 ;
