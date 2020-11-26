@@ -10,7 +10,7 @@ permalink: /animasjoner/merge/
 
 Hvis man har en liste på *n* elementer, så fungerer algoritmen på følgende måte. Del listen inn i *n* forskjellige lister.  Deretter slår en sammen to og to lister  systematisk sammen til en ny sortert liste. Sammenslåingen gjøres ved å sammenligne de første elementene i listene og velge ut den minste og sette den inn i den nye listen. Videoen under illusterer algoritmen.
 <div class="centered-videoplayer">
-<video width="720" height="480" controls autoplay="true" loop="true">
+<video width="720" height="480" controls  loop="true">
   <source src="/assets/sortering/merge_sort/merge_sort.mp4">
 </video>
 </div>
