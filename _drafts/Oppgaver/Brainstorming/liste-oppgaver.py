@@ -54,5 +54,5 @@ def generer_alle_delmengder2(liste):
 
 testliste2 = ["A", "B", "C"]
 # print(testliste2)
-testliste2 = generer_alle_delmengder(testliste2)
+testliste2 = generer_alle_delmengder2(testliste2)
 print(testliste2)
