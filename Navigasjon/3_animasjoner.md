@@ -20,13 +20,17 @@ Her har vi laget en animasjon som "kartlegger" sporet av et punkt på en sirkel 
 <br>
 
 
-### [Gangetabell i sirkel]({% post_url P5JS/2020-09-30-Mathologer %}) 
+### [Modulær multiplikasjon]({% post_url P5JS/2020-09-30-Mathologer %}) 
 Her har vi laget en animasjon som baserer seg på å tegne opp en gangetabell i en sirkel.
 
 <br>
 
-### [Sortering]({% post_url P5JS/2020-09-30-P5JS %})
-Bobblesortering animert ved hjelp av farger og sirkler.
+### [Boblesortering]({% post_url P5JS/2020-09-30-P5JS %})
+En sorteringsalgoritme animert ved hjelp av farger og sirkler.
 
+<br>
+
+### [Flettesortering]({% post_url P5JS/2020-11-20-mergesort %})
+En sorteringsalgoritme animert med [manim](https://github.com/3b1b/manim){:target="_blank"}
 
 <br>
