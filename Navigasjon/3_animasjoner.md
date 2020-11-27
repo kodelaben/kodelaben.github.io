@@ -25,12 +25,12 @@ Her har vi laget en animasjon som baserer seg på å tegne opp en gangetabell i 
 
 <br>
 
-### [Boblesortering]({% post_url P5JS/2020-09-30-P5JS %})
-En sorteringsalgoritme animert ved hjelp av farger og sirkler.
+### [Flettesortering]({% post_url P5JS/2020-11-20-mergesort %})
+En sorteringsalgoritme animert med python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
 
 <br>
 
-### [Flettesortering]({% post_url P5JS/2020-11-20-mergesort %})
-En sorteringsalgoritme animert med python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
+### [Diverse animasjoner i P5JS]({% post_url P5JS/2020-09-30-P5JS %})
+Ukategoriserte animasjoner laget i P5JS (JavaScript).
 
 <br>

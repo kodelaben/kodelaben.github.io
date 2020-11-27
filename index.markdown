@@ -11,10 +11,8 @@ For øyeblikket har vi valgt å dele innholdet på siden inn i tre kategorier. I
 * Den andre kategorien inneholder visuelle [animasjoner og fremstillinger]({% link Navigasjon/3_animasjoner.md %}). Hensikten med disse animasjonene er å illustrere hvordan man kan bruke programmering til å visualisere matematiske sammenhenger eller bare å ha dem som utgangspunkt for å lære programmering.
 * Den tredje kategorien inneholder [større prosjekter]({% link Navigasjon/4_storre_prosjekter.md %}) som skal illustrere andre områder hvor man anvender programmering.
 
-<!-- ## **Fremhevede prosjekter** -->
-<!-- 
-<img src="/assets/images/Rullende-sirkler/output.gif" width="50%"><img src="/assets/images/Rullende-sirkler/utenstoy.gif" width="50%">
-<img src="/assets/images/Sinusgraf/output.gif" width="100%"> -->
+
+
 
 <!-- 
 <iframe src="https://editor.p5js.org/AndreMartiny/embed/G3GsaJhZg" width="100%" height="820px" frameBorder="0"></iframe> 

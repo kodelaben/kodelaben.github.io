@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Animasjoner i P5JS"
+title:  "Modulær multiplikasjon"
 mathjax: true
 hidden: true
-permalink: /animasjoner/gangetabell-i-sirkel/
+permalink: /animasjoner/P5JS/modular_multiplikasjon/
 ---
 
 Under er en animasjon inspirert av en <a href="https://www.youtube.com/watch?v=qhbuKbxJsk8&ab_channel=Mathologer" target="_blank" >YouTube video </a> av Burkard Polster. 
