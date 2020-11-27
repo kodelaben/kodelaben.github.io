@@ -9,7 +9,7 @@ ___
 
 {% highlight python %}
 
-For eksempel er alle delmengdene av [1,2,3] mengdene.
+For eksempel er alle delmengdene av [1,2,3] mengdene:
 [],
 [1],
 [2],
