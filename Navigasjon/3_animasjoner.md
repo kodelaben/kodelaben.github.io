@@ -31,6 +31,6 @@ En sorteringsalgoritme animert ved hjelp av farger og sirkler.
 <br>
 
 ### [Flettesortering]({% post_url P5JS/2020-11-20-mergesort %})
-En sorteringsalgoritme animert med python-biblioteket [Manim](https://github.com/3b1b/manim){:target="_blank"}
+En sorteringsalgoritme animert med python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
 
 <br>

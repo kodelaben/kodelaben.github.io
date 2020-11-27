@@ -9,7 +9,7 @@ ___
 ### Lag et program som printer det n'te tallet i Fibonacci-rekka til terminalen: 1, 1, 2, 3, 5, 8, ...
 
 
-<summary>Forventet resultat</summary>
+<summary>Forventet resultat:</summary>
 <p>
 
 {% highlight python %}

@@ -5,19 +5,15 @@ mathjax: true
 hidden: true
 permalink: /animasjoner/P5JS/
 ---
-## Her er eksempler på animasjoner som kan lages ved hjelp av P5JS. 
+## Her er noen eksempler på ulike animasjoner som er laget ved hjelp av P5JS. 
 Trykk på animasjonene for å se steg for steg hvordan koden er bygd opp.
 
 <a href="https://editor.p5js.org/AndreMartiny/sketches/eJo1yPbmP" target="_blank" ><img src="/assets/images/sirkleritakt/sirkleritakt.gif" > </a>
 
 
 
-
-
-
-
-#### Bubblesort-ish
+#### Boblesortering 1
 <iframe src="https://editor.p5js.org/AndreMartiny/embed/gSG5zKlSN" width="400" height="400" frameBorder="0"></iframe>
 
-#### Bubble-sort
+#### Boblesortering 2
 <iframe src="https://editor.p5js.org/AndreMartiny/embed/3Nq7CxBOI" width="400" height="400" frameBorder="0"></iframe>
