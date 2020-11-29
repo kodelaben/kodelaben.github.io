@@ -30,7 +30,7 @@ function draw() {
     counter--;
   }
   if (sorterte == antall){
-    noLoop()
+    noLoop();
   }
 }
 
