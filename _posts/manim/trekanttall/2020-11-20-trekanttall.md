@@ -28,12 +28,6 @@ Random videoer som er relatert til trekanttall
 
 
 
-<div class="centered-videoplayer">
-<video width="720" height="480" controls  loop="true">
-  <source src="/assets/manim/trekanttall/Scene1test_des2.mp4">
-</video>
-</div>
-
 
 <div class="centered-videoplayer">
 <video width="720" height="480" controls  loop="true">
