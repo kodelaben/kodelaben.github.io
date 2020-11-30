@@ -15,4 +15,4 @@ def fyller_hundre():
     return print(svartekst)
 
 
-fyller_hunder()
+fyller_hundre()
