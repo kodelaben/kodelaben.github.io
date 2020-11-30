@@ -3,7 +3,7 @@ layout: post
 title:  "Euklids algoritme"
 mathjax: true
 hidden: true
-permalink: /matematiske_problemer/euklids_algoritme.html
+permalink: /matematiske_algoritmer/euklids_algoritme.html
 ---
 
 Her kan du se en kode som produserer løsningsforslag til Euklids algoritme for å først finne største felles multiplum mellom to tall og deretter bruke dette til å løse diofantiske likninger av typen \\(ax + by = 1\\).
