@@ -34,7 +34,7 @@ function draw() {
       counter = -1;
       tegnsøyler();
       redraw();
-      noLoop();
+      pause = 1;
     }
   }
 }
@@ -159,6 +159,7 @@ function restart() {
   }
   sorteringsarray.push(referencearray);
   create_merging_history();
+  nivå = 0;
   counter = 0;
   sorterte = 0;
   pause = 1;
