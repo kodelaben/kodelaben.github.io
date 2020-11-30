@@ -3,7 +3,7 @@ layout: post
 title:  "Herons metode"
 mathjax: true
 hidden: true
-permalink: /matematiske_algoritmer/herons_metode.html
+permalink: /matematiske_problemer/herons_metode.html
 ---
 <!-- TODO: Her bør ting introduseres. -->
 Herons metode er en metode for å finne tilnærmingsverdien til \\(\\sqrt{n}\\) når \\(n \\in\\mathbb{N} \\). Idéen handler om å gjøre om et rektangel med sidelengder \\(1\\) og \\(n\\) (slik at arealet er \\(n\\)), til et nytt rektangel med areal \\(n\\) som ser «mer kvadratisk ut». 

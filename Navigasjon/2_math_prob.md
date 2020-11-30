@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Matematiske Algoritmer
-permalink: /matematiske_algoritmer.html
+title: Matematiske problemer
+permalink: /matematiske_problemer.html
 ---
 
-Programmering kan brukes for å løse Matematiske Algoritmer og er spesielt effektivt hvis teknikken som benyttes tar utgangspunkt i en algoritmisk fremgangsmåte. 
+Programmering kan brukes for å løse matematiske problemer og er spesielt effektivt hvis teknikken som benyttes tar utgangspunkt i en algoritmisk fremgangsmåte. 
 
 Noen eksempler på prosjekter som faller innenfor denne kategorien er:
 1. [Herons metode]({% post_url Herons-Metode/2020-01-01-Herons %}) for å approksimere kvadratroten av et naturlig tall.
