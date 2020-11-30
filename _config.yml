@@ -31,6 +31,8 @@ github_username:  kodelaben
 # Build settings
 markdown: kramdown
 
+# Google Analytics
+google_analytics: G-EH9RLHH17S
 
 theme: minima
 minima:
