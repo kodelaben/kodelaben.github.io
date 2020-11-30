@@ -5,7 +5,7 @@ mathjax: true
 permalink: /oppgaver/
 ---
 
-Vi har funnet frem noen oppgaver som skal hjelp deg med å bli kjent med syntaksen og ulike funksjon-aliteter i Python. Til oppgavene har vi valgt ut en funksjon eller konsept med lenke til <a href="https://www.w3schools.com/python/" target="_blank">W3Schools</a>, hvor du kan lese mer om det du skal bli kjent med i møte med oppgavene. 
+Vi har funnet frem noen oppgaver som skal hjelp deg med å bli kjent med syntaksen og ulike funksjoner i Python. Til oppgavene har vi valgt ut en (eller flere) funksjon(er) eller konsept, med som lenke til <a href="https://www.w3schools.com/python/" target="_blank">W3Schools</a>. Der kan du lese mer utfyllende om det du skal jobbe med i oppgaven. 
 
 
 * [Oppgave 1]({% post_url Oppgaver/Intro/2020-10-31-Oppg_1 %}). Fokus: <a href="https://www.w3schools.com/python/ref_func_print.asp" target="_blank"> ``print()``</a> og <a href="https://www.w3schools.com/python/ref_func_input.asp" target="_blank"> ``input()``</a>

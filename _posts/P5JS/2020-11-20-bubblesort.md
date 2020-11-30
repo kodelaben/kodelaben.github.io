@@ -6,15 +6,15 @@ hidden: true
 permalink: /animasjoner/bubble/
 ---
 
+*Boblesortering* er en enkel sorteringsalgoritme som går inn i en liste, sammenlikner naboelementer og bytter plass på dem hvis de står feil i forhold til hverandre. Algoritmen gjentas helt til lista er sortert. Videoen under illustrer hvordan algoritmen jobber seg gjennom en liste med tall for å sortere dem i stigende rekkefølge.
 
-<!-- 
 <div class="centered-videoplayer">
 <video width="720" height="480" controls  loop="true">
-  <source src="/assets/sortering/merge_sort/merge_sort.mp4">
+  <source src="/assets/sortering/bubble_sort/Boblesort.mp4">
 </video>
-</div> -->
+</div>
 
-
+Under er en animasjon som viser hvordan algoritmen sorterer en tilfeldig liste av stolper i stigende rekkefølge. Trykk F5 for å starte animasjonen på nytt.
 
 <div style="text-align:center;">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>

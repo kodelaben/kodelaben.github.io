@@ -26,7 +26,12 @@ Her har vi laget en animasjon som baserer seg på å tegne opp en gangetabell i 
 <br>
 
 ### [Flettesortering]({% post_url P5JS/2020-11-20-mergesort %})
-En sorteringsalgoritme animert med python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
+En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
+
+<br>
+
+### [Boblesortering]({% post_url P5JS/2020-11-20-bubblesort %})
+En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
 
 <br>
 
