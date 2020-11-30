@@ -99,8 +99,13 @@ $transition-speed: 600ms;
   color: #383bec;
 }
 
+.fa-tridinary {
+    color: #000152;
+  }
+
 .fa-primary,
-.fa-secondary {
+.fa-secondary,
+.fa-tridinary {
   transition: $transition-speed;
 }
 
