@@ -3,7 +3,7 @@ let høyde = 400;
 let potens = 5;
 let antall = 2 ** potens;
 let søyler = [];
-let buffer = bredde/antall/2;
+let buffer = bredde / antall / 2;
 let linjebredde = bredde / antall;
 let counter = 0;
 let nivå = 0;
@@ -11,6 +11,7 @@ let referencearray = [];
 let sorteringsarray = [];
 let antallSammenligninger = antall / 2;
 let nestelistedelay = 0;
+let pause = 1;
 
 function setup() {
   var canvas = createCanvas(bredde, høyde);
@@ -21,21 +22,22 @@ function setup() {
 function draw() {
   background(0);
   tegnsøyler();
-  byttsøyler(nivå, counter);
-  counter++;
-  if (counter == antall) {
-    nivå++;
-    counter = 0;
-  }
-  if (nivå == potens) {
-    background(0);
-    counter = -1;
-    tegnsøyler();
-    redraw();
-    noLoop();
+  if (pause == 0) {
+    byttsøyler(nivå, counter);
+    counter++;
+    if (counter == antall) {
+      nivå++;
+      counter = 0;
+    }
+    if (nivå == potens) {
+      background(0);
+      counter = -1;
+      tegnsøyler();
+      redraw();
+      noLoop();
+    }
   }
 }
-
 function tegnsøyler() {
   let størrlesepålistene = 2 ** (nivå + 1);
   let indeksIlisten = counter % størrlesepålistene;
@@ -56,7 +58,7 @@ function tegnsøyler() {
       linjebredde * i + buffer,
       height,
       linjebredde * i + buffer,
-      height - søyler[i] * 1.5*4
+      height - søyler[i] * 1.5 * 4
     );
   }
 }
@@ -141,6 +143,25 @@ function byttsøyler(level, teller) {
   let listeindeks = (teller - indeksIlisten) / størrlesepålistene;
   søyler[teller] =
     sorteringsarray[potens - level - 1][listeindeks][indeksIlisten];
+}
+
+function unpause() {
+  pause = (pause + 1) % 2;
+}
+
+function restart() {
+  søyler = shufflearray(søyler);
+  referencearray = [];
+  sorteringsarray = [];
+  for (let i = 0; i < antall; i++) {
+    dummyarray = [søyler[i]];
+    referencearray.push(dummyarray);
+  }
+  sorteringsarray.push(referencearray);
+  create_merging_history();
+  counter = 0;
+  sorterte = 0;
+  pause = 1;
 }
 
 // function merge_sort(array) {
