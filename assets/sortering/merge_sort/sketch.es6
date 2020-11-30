@@ -1,4 +1,4 @@
-let bredde = 2 ** 10;
+let bredde = 940;
 let høyde = 400;
 let potens = 5;
 let antall = 2 ** potens;
