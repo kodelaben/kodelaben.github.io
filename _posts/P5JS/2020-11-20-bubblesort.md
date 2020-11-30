@@ -22,3 +22,9 @@ Under er en animasjon som viser hvordan algoritmen sorterer en tilfeldig liste a
     <script src="/assets/sortering/bubble_sort/sketch.es6"></script>
     <div id="canvasForHTML"></div>
 </div>
+
+<div class="sudokuoverlay">
+<button class ='button sudokubutton' onclick="unpause()" id="example-three" data-text-swap="Pause" data-text-original="Start"><span>Start</span></button>
+ </div>
+ <script src="/assets/sortering/bubble_sort/buttonstyle.js"></script>
+<!-- onclick='heronstext()' -->

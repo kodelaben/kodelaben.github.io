@@ -79,7 +79,7 @@ $transition-speed: 600ms;
 }
 
 .link-text {
-//   display: none;
+  //   display: none;
   opacity: 0;
   margin-left: 1rem;
   overflow: hidden;
@@ -100,8 +100,14 @@ $transition-speed: 600ms;
 }
 
 .fa-tridinary {
-    color: #000152;
-  }
+  color: #000152;
+  filter: grayscale(100%) opacity(0.3);
+}
+
+.fa-tridinary:hover {
+  color: #000152;
+  filter: grayscale(0%) opacity(1);
+}
 
 .fa-primary,
 .fa-secondary,
@@ -285,7 +291,7 @@ $transition-speed: 600ms;
 @media only screen and (min-width: 600px) {
   .site-footer {
     border-top: 1px solid $border-color-01;
-    padding: 1rem  0 ;
+    padding: 1rem 0;
     white-space: nowrap;
   }
 }
@@ -310,7 +316,6 @@ $transition-speed: 600ms;
   color: $brand-color;
   margin-left: 5rem;
   white-space: initial;
-
 }
 
 .footer-col {
@@ -436,34 +441,28 @@ $transition-speed: 600ms;
   }
 }
 
-
 #logo {
-    fill: white;
-    fill-opacity: 0%;
-    animation: fillFadeIn 1.5s ease-in 27* 0.04s forwards;
+  fill: white;
+  fill-opacity: 0%;
+  animation: fillFadeIn 1.5s ease-in 27 * 0.04s forwards;
 }
-
-
 
 @for $i from 1 through 9 {
-    #logo path:nth-child(#{$i}) {
-        stroke-dasharray: 100%;
-        stroke-dashoffset: 100%;
-        animation: fadeInAnimation 1s ease-in $i*0.04s forwards;
-    }
+  #logo path:nth-child(#{$i}) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    animation: fadeInAnimation 1s ease-in $i * 0.04s forwards;
   }
-  
-
-
-@keyframes fadeInAnimation{
-    to {
-        stroke-dashoffset: 0%;
-    }
 }
 
+@keyframes fadeInAnimation {
+  to {
+    stroke-dashoffset: 0%;
+  }
+}
 
-@keyframes fillFadeIn{
-    to {
-        fill-opacity: 100%;
-    }
+@keyframes fillFadeIn {
+  to {
+    fill-opacity: 100%;
+  }
 }

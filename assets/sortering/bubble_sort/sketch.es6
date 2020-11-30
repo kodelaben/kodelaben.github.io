@@ -7,25 +7,26 @@ let buffer = bredde / antall / 2;
 let linjebredde = bredde / antall;
 let counter = 0;
 let sorterte = 0;
+let pause = 1;
 
 function setup() {
   var canvas = createCanvas(bredde, høyde);
   canvas.parent("canvasForHTML");
-  frameRate(60);
+  frameRate(30);
 }
 
 function draw() {
   background(0);
   tegnsøyler();
   bytt_soyler(counter);
-  if (counter < antall - 1-sorterte) {
-    counter++;
+  if (pause == 0) {
+    if (counter < antall - 1 - sorterte) {
+      counter++;
+    } else {
+      sorterte++;
+      counter = 0;
+    }
   }
-  else {
-    sorterte ++;
-    counter = 0;
-  }
-
 }
 
 function bytt_soyler(counter) {
@@ -76,3 +77,7 @@ for (let i = 0; i < antall; i++) {
 }
 
 søyler = shufflearray(søyler);
+
+function unpause() {
+  pause = (pause + 1) % 2;
+}
