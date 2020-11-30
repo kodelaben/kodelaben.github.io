@@ -81,3 +81,10 @@ søyler = shufflearray(søyler);
 function unpause() {
   pause = (pause + 1) % 2;
 }
+
+function restart() {
+  søyler = shufflearray(søyler);
+  counter = 0;
+  sorterte = 0;
+  pause = 1;
+}
