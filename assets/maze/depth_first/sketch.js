@@ -32,6 +32,7 @@ function draw() {
   for (let y = 0; y < celleriyretning; y++) {
     for (let x = 0; x < cellerixretning; x++) {
       if (celler[y][x].visited) {
+          
         celler[y][x].draw();
       }
     }
@@ -79,6 +80,11 @@ class Cell {
     this.walls = [true, true, true, true];
   }
   draw() {
+    strokeWeight(0);
+    fill(158, 231, 245, 60);
+    rect(this.x, this.y, this.width-1, this.width-1);
+    strokeWeight(5);
+    stroke(180, 249, 165);
     if (this.walls[0] == true) {
       line(this.x, this.y, this.x + this.width, this.y);
     }
