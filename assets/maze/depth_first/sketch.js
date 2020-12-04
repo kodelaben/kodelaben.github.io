@@ -23,7 +23,7 @@ function setup() {
   canvas.parent("canvasForHTML");
   stroke(255);
   strokeWeight(2);
-  frameRate(5);
+  frameRate(30);
   rectMode(CORNER);
 }
 
@@ -36,14 +36,14 @@ function draw() {
       }
     }
   }
-  fill(100,100,50);
-  rect(currentCell.x, currentCell.y, width, width)
+  fill(100, 100, 50);
+  rect(currentCell.x, currentCell.y, width, width);
   // While the stack is not empty
   if (stack.length != 0) {
     // Pop a cell from the stack and make it a current cell
     currentCell = stack.pop();
     // If the current cell has any neighbours which have not been visited
-    if (currentCell.returnUnvisitedNeighboors() != null) {
+    if (currentCell.returnUnvisitedNeighboors().length > 0) {
       // Push the current cell to the stack
       stack.push(currentCell);
       // Choose one of the unvisited neighbours
@@ -102,25 +102,44 @@ class Cell {
       line(this.x, this.y + this.width, this.x, this.y);
     }
   }
-  returnUnvisitedNeighboors() {
+  returnNeighboors() {
     let directions = [];
     if (this.y > 0) {
       directions.push(0);
     }
-    if (this.x < bredde) {
+    if (this.x < bredde-width) {
       directions.push(1);
     }
-    if (this.y < hoyde) {
+    if (this.y < hoyde-width) {
       directions.push(2);
     }
     if (this.x > 0) {
       directions.push(3);
     }
-    if (directions.length == 0) {
-      return null;
-    } else {
-      return directions;
+    return directions;
+  }
+
+  returnUnvisitedNeighboors() {
+    let neighboors = this.returnNeighboors();
+    let visitedNeighboors = [];
+    for (let neighboor of neighboors) {
+      if (neighboor % 2 == 0) {
+        if (
+          celler[int(this.y / width) - 1 + neighboor][int(this.x / width)]
+            .visited == false
+        ) {
+          visitedNeighboors.push(neighboor);
+        }
+      } else {
+        if (
+          celler[int(this.y / width)][int(this.x / width) - neighboor + 2].visited ==
+          false
+        ) {
+          visitedNeighboors.push(neighboor);
+        }
+      }
     }
+    return visitedNeighboors;
   }
 }
 
