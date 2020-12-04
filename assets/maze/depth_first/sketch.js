@@ -13,6 +13,8 @@ let hoyde = 600;
 let bredde = 900;
 let cellerixretning = bredde / width;
 let celleriyretning = hoyde / width;
+let colors = ["#03071e","#370617","#6a040f","#9d0208","#d00000","#dc2f02","#e85d04","#f48c06","#faa307","#ffba08"]
+ //["#88DEB0", "#69C6AF", "#4EADAF", "#377A98", "#244A80", "#152069"]
 
 let celler = [];
 // initialize a stack
@@ -22,8 +24,7 @@ function setup() {
   var canvas = createCanvas(900, 600);
   canvas.parent("canvasForHTML");
   stroke(255);
-  strokeWeight(2);
-  frameRate(30);
+  frameRate(60);
   rectMode(CORNER);
 }
 
@@ -37,12 +38,16 @@ function draw() {
       }
     }
   }
-  fill(100, 100, 50);
+
+  fill("#ffadad");
+  strokeWeight(0);
   rect(currentCell.x, currentCell.y, width, width);
+  
   // While the stack is not empty
   if (stack.length != 0) {
     // Pop a cell from the stack and make it a current cell
     currentCell = stack.pop();
+    currentCell.timesVisited += 1;
     // If the current cell has any neighbours which have not been visited
     if (currentCell.returnUnvisitedNeighboors().length > 0) {
       // Push the current cell to the stack
@@ -66,6 +71,7 @@ function draw() {
       }
       // Mark the chosen cell as visited and push it to the stack
       currentCell.visited = true;
+    //   currentCell.timesVisited += 1;
       stack.push(currentCell);
     }
   }
@@ -77,14 +83,15 @@ class Cell {
     this.y = y;
     this.width = width;
     this.visited = false;
+    this.timesVisited = 0;
     this.walls = [true, true, true, true];
   }
   draw() {
     strokeWeight(0);
-    fill(158, 231, 245, 60);
+    fill(158, 231, 245, 80-  this.timesVisited*12);
     rect(this.x, this.y, this.width-1, this.width-1);
     strokeWeight(5);
-    stroke(180, 249, 165);
+    stroke("#52b788");
     if (this.walls[0] == true) {
       line(this.x, this.y, this.x + this.width, this.y);
     }
