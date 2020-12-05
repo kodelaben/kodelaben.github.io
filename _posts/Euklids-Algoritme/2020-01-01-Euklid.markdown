@@ -35,7 +35,7 @@ Ved å sette dette inn i likningen over får vi
 
 Det dette viser er at hvis vi kan finne en løsning til den diofantiske likningen 
 \\[b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b), \\]
-så finner vi også en løsning til den originale diofantiske likningen. Igjen kan vi også legge merke til at vi kan gjenta denne prosessen så lenge vi ønsker. Helt spesielt så kan vi gjenta denne prosessen ned til det tallparet \\((0, \\text{sff}(a,b)\\). Men den diofantiske likningen med koeffisienter 0 og sff(\\(a, b\\)) har jo triviell løsning \\(x = 0\\) og \\(y = 1\\). Dette er det som kalles den *utvidede Euklidske metode* og kan enkelt implementeres i Python rekursivt, som under.
+så finner vi også en løsning til den originale diofantiske likningen. Igjen kan vi også legge merke til at vi kan gjenta denne prosessen så lenge vi ønsker. Helt spesielt så kan vi gjenta denne prosessen ned til det tallparet \\((\\text{sff}(a, b), 0\\). Men den diofantiske likningen med koeffisienter sff(\\(a, b\\)) og 0 har jo triviell løsning \\(x = 1\\) og \\(y = 0\\). Dette er det som kalles den *utvidede Euklidske metode* og kan enkelt implementeres i Python rekursivt, som under.
 
 
 <p>

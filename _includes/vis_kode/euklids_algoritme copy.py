@@ -60,9 +60,10 @@ def RekursivLosningAvDiofantiskLikningMedKoeffisienter(a, b):
         # ssf(a,b) = a* y + b* (x - (a // b) * y )
         print(f"{a} = {b} * {a // b} + {a % b}")
         sff, x, y = RekursivLosningAvDiofantiskLikningMedKoeffisienter(b, a % b)
-    x, y = y, (x-(a // b) * y)
-    print(f"{sff} = {a} * {x} + {b} *{y}")
-    return sff, x, y
+        print(f"{sff} = {a} * {y} + {b} * ({x} - ({a // b}) * {y})")
+        x, y = y, (x-(a // b) * y)
+        print(f"{sff} = {a} * {x} + {b} *{y}")
+        return sff, x, y
     
-RekursivLosningAvDiofantiskLikningMedKoeffisienter(1027, 729)
+RekursivLosningAvDiofantiskLikningMedKoeffisienter(1023412427, 7212412419)
 
