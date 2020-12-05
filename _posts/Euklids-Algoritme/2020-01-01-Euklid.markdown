@@ -40,14 +40,13 @@ så finner vi også en løsning til den originale diofantiske likningen. Igjen k
 
 <p>
 {% highlight python linenos %}
-def RekursivLosningAvDiofantiskLikningMedKoeffisienter(a, b):
+def LosningAvDiofantiskLikningMedKoeffisienter(a, b):
     if a < b:
-        return RekursivLosningAvDiofantiskLikningMedKoeffisienter(b, a)
+        return LosningAvDiofantiskLikningMedKoeffisienter(b, a)
     if (b == 0):
         return a, 1, 0
-    
     else:
-        sff, x, y = RekursivLosningAvDiofantiskLikningMedKoeffisienter(b, a % b)
+        sff, x, y = LosningAvDiofantiskLikningMedKoeffisienter(b, a % b)
     x, y = y, (x-(a // b) * y)
     return sff, x, y
 {% endhighlight %}
