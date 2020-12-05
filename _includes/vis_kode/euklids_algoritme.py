@@ -1,17 +1,4 @@
 
-
-def FellesFaktorAv(a, b):
-    while a != b:
-        a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
-        a = a - b
-    return a
-
-def EuklidsMetodeForFellesFaktorAv(a, b):
-    while a != b and a!= 0:
-        a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
-        a = a % b
-    return b
-
 def EM1(a, b):
     likninger = [] # Her lagrer vi alle likningene våre som lister
     while True:
@@ -44,8 +31,3 @@ def LosDiofantiskLikningMedKoeffisienter(a, b):
         r_n = likninger[-i-1][0]
         reversering.append([likninger[-1][-1], d, r_nminus1,  (c+d*(-c_n)), r_n])
         print(f"{reversering[-1][0]} = {reversering[-1][1]} · {reversering[-1][2]} "+ ("+" if reversering[-1][3]> 0 else "") +f" {reversering[-1][3]} · {reversering[-1][4]}\n")
-
-
-
-
-LosDiofantiskLikningMedKoeffisienter(7223423419, 1012412412529)

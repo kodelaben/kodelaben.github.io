@@ -6,17 +6,56 @@ hidden: true
 permalink: /matematiske_problemer/euklids_algoritme.html
 ---
 
-Her kan du se en kode som produserer løsningsforslag til Euklids algoritme for å først finne største felles multiplum mellom to tall og deretter bruke dette til å løse diofantiske likninger av typen \\(ax + by = 1\\).
 
-<details>
-<summary>Vis kode</summary>
+Euklids metode er en effektiv metode for å beregne største felles faktor (sff) av to heltall. Metoden baserer seg på følgende observasjon. Hvis \\(a\\) og \\(b\\) er to heltall med \\(a \\geq b\\), så vil største felles faktor til \\(a\\) og \\(b\\)  også være største felles faktor til    \\(a \\ \\% \\ b\\) og \\(b\\). Med andre ord:
+\\[\\text{sff}(a, b) = \\text{sff}(a\\ \\% \\ b, b).\\]
+
+Vi kan legge merke til at dette gir oss en algoritme vi kan gjenta så mange ganger vi vi ønsker. Algoritmen produserer mindre og mindre par. Til slutt vil den ene verdien i paret bli 0, og den andre verdien må dermed være største felles faktor til det opprinnelige paret \\(a\\) og \\(b\\). Vi kan lage et program i Python som utfører denne algoritmen på følgende måte. 
 <p>
 {% highlight python linenos %}
-{% include vis_kode/euklids_algoritme.py %}
+def EuklidsMetodeForFellesFaktorAv(a, b):
+    while a!= 0:
+        a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
+        a = a % b
+    return b
 {% endhighlight %}
 </p>
 
-</details>
+I tallteori ønsker vi ofte å studere likninger med helltallskoeffisienter \\(a\\) og \\(b\\), kalt *diofantiske likninger*. I diofantiske likninger er vi ute etter heltallsløsninger til likningen  
+\\[a\\cdot x + b\\cdot y = \\text{sff}(a, b).\\]
+
+Legg merke til at hvis vi kan finne løsningen på den diofantiske likningen 
+\\[b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b) = \\text{sff}(a, b),\\]
+så kan vi bruke at
+\\[a \\ \\% \\ b = a - a \\  // \\ b. \\]
+
+Ved å sette dette inn i likningen over får vi
+
+\\[ a\\cdot y + b\\cdot (x - (a \\ // \\ b) \\cdot y) = \\text{sff}(a, b).\\]
+
+Det dette viser er at hvis vi kan finne en løsning til den diofantiske likningen 
+\\[b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b), \\]
+så finner vi også en løsning til den originale diofantiske likningen. Igjen kan vi også legge merke til at vi kan gjenta denne prosessen så lenge vi ønsker. Helt spesielt så kan vi gjenta denne prosessen ned til det tallparet \\((0, \\text{sff}(a,b)\\). Men den diofantiske likningen med koeffisienter 0 og sff(\\(a, b\\)) har jo triviell løsning \\(x = 0\\) og \\(y = 1\\). Dette er det som kalles den *utvidede Euklidske metode* og kan enkelt implementeres i Python rekursivt, som under.
+
+
+<p>
+{% highlight python linenos %}
+def RekursivLosningAvDiofantiskLikningMedKoeffisienter(a, b):
+    if a < b:
+        return RekursivLosningAvDiofantiskLikningMedKoeffisienter(b, a)
+    if (b == 0):
+        return a, 1, 0
+    
+    else:
+        sff, x, y = RekursivLosningAvDiofantiskLikningMedKoeffisienter(b, a % b)
+    x, y = y, (x-(a // b) * y)
+    return sff, x, y
+{% endhighlight %}
+</p>
+
+
+Under kan du se en kode som produserer løsningsforslag til Euklids algoritme for å først finne største felles multiplum mellom to tall og deretter bruke dette til å løse diofantiske likninger av typen \\(ax + by = 1\\).
+
 
 <details >
 <summary>Prøv koden</summary>

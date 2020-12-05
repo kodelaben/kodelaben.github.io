@@ -1,17 +1,17 @@
 
 
-def FellesFaktorAv(a, b):
-    while a != b:
-        a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
-        a = a - b
-    return a
-
-# def EuklidsMetodeForFellesFaktorAv(a, b):
-#     while a != b and a!= 0:
+# def FellesFaktorAv(a, b):
+#     while a != b:
 #         a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
-#         a = a % b
-#     return b
+#         a = a - b
+#     return a
 
+def EuklidsMetodeForFellesFaktorAv(a, b):
+    while a!= 0:
+        a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
+        a = a % b
+    return b
+print(EuklidsMetodeForFellesFaktorAv(5,15))
 # def EM1(a, b):
 #     likninger = [] # Her lagrer vi alle likningene våre som lister
 #     while True:
