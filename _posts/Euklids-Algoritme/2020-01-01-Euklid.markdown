@@ -56,8 +56,6 @@ def LosningAvDiofantiskLikningMedKoeffisienter(a, b):
 Under kan du se en kode som produserer løsningsforslag til Euklids algoritme for å først finne største felles multiplum mellom to tall og deretter bruke dette til å løse diofantiske likninger av typen \\(ax + by = 1\\).
 
 
-<details >
-<summary>Prøv koden</summary>
 
 
 <div background='black'>
@@ -69,8 +67,6 @@ Under kan du se en kode som produserer løsningsforslag til Euklids algoritme fo
 <div    >
 <p id='svar'> </p>
 </div>
-
-</details>
 
 
 
