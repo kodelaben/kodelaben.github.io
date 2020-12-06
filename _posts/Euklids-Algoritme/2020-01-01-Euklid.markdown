@@ -22,21 +22,23 @@ def EuklidsMetodeForFellesFaktorAv(a, b):
 </p>
 
 I tallteori ønsker vi ofte å studere likninger på formen,
-\\[a\\cdot x + b\\cdot y = \\text{sff}(a, b),\\]
+\\[\tag 1 a\\cdot x + b\\cdot y = \\text{sff}(a, b),\\]
 hvor \\(a\\) og \\(b\\) er heltall. Slike likninger kalles *lineære diofantiske likninger*, og det er heltallsløsningene vi er ute etter. 
 
-Legg merke til at hvis vi i stedet kan finne løsningen på den diofantiske likningen 
-\\begin{equation}b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b) = \\text{sff}(a, b),\\end{equation}
+Legg merke til at hvis vil kan finne løsningen på den diofantiske likningen 
+\\begin{equation}\\tag 2 b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b) ,\\end{equation}
 så kan vi bruke at
-\\[a \\ \\% \\ b = a - a \\  // \\ b. \\]
+\\[a \\ \\% \\ b = a - a \\  // \\ b \\quad \\text{ og at } \\quad  \\text{sff}(a, b)  = \\text{sff}(b, a \\ \\% \\ b). \\]
 
-Ved å sette dette inn i likningen over får vi
+Ved å sette dette inn i likning (2) får vi
 
-\\[ a\\cdot y + b\\cdot (x - (a \\ // \\ b) \\cdot y) = \\text{sff}(a, b).\\]
+\\[\tag 3 a\\cdot y + b\\cdot (x - (a \\ // \\ b) \\cdot y) = \\text{sff}(a, b).\\]
 
-Det dette viser er at hvis vi kan finne en løsning til den diofantiske likningen 
+Det (3) viser er at hvis vi kan finne en løsning til den diofantiske likningen 
 \\[b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b), \\]
-så finner vi også en løsning til den originale diofantiske likningen. Igjen kan vi også legge merke til at vi kan gjenta denne prosessen så lenge vi ønsker. Helt spesielt så kan vi gjenta denne prosessen ned til det tallparet \\((\\text{sff}(a, b), 0\\)). Men den diofantiske likningen med koeffisienter sff(\\(a, b\\)) og 0 har jo triviell løsning \\(x = 1\\) og \\(y = 0\\). Å løse diofantiske likninger ved å reversere denne prosessen er det som kalles den *utvidede Euklidske metode* og kan enkelt implementeres i Python rekursivt, som under.
+så finner vi også en løsning til den originale diofantiske likningen (1). Igjen kan vi også legge merke til at vi kan gjenta denne prosessen så lenge vi ønsker. 
+
+Helt spesielt så kan vi gjenta denne prosessen fra koeffisienter (\\(a, b\\)) ned til koeffisienter \\((\\text{sff}(a, b), 0\\)). Men den diofantiske likningen med koeffisienter sff(\\(a, b\\)) og 0 har jo triviell løsning \\(x = 1\\) og \\(y = 0\\). Å løse diofantiske likninger ved å reversere denne prosessen er det som kalles den *utvidede Euklidske metode* og kan enkelt implementeres i Python rekursivt, som under.
 
 <p>
 {% highlight python linenos %}
