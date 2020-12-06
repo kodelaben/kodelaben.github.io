@@ -10,25 +10,25 @@ permalink: /matematiske_problemer/euklids_algoritme.html
 Euklids metode er en effektiv metode for å beregne største felles faktor (sff) av to heltall. Metoden baserer seg på følgende observasjon. Hvis \\(a\\) og \\(b\\) er to heltall med \\(a \\geq b\\), så vil største felles faktor til \\(a\\) og \\(b\\)  også være største felles faktor til    \\(a \\ \\% \\ b\\) og \\(b\\). Med andre ord:
 \\[\\text{sff}(a, b) = \\text{sff}(a\\ \\% \\ b, b).\\]
 
-Vi kan legge merke til at dette gir oss en metode vi kan gjenta så mange ganger vi vi ønsker. Algoritmen produserer mindre og mindre tallpar. Til slutt vil den ene verdien i paret bli 0, og den andre verdien må dermed være største felles faktor til det opprinnelige paret \\(a\\) og \\(b\\). Vi kan lage et program i Python som utfører denne algoritmen på følgende måte. 
+Vi kan legge merke til at dette gir oss en metode vi kan gjenta så mange ganger vi vi ønsker. Algoritmen produserer mindre og mindre tallpar. Til slutt vil den ene verdien i paret bli 0, og den andre verdien må dermed være største felles faktor til det opprinnelige paret \\(a\\) og \\(b\\). I Python kan vi lage et program som utfører denne algoritmen på følgende måte:
 <p>
 {% highlight python linenos %}
 def EuklidsMetodeForFellesFaktorAv(a, b):
-    while a!= 0:
-        a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
-        a = a % b
+    while a != 0:
+        a, b = max(a, b), min(a, b) # Definerer a til å være den største av a og b.
+        a = a % b # Redefinerer a til å være resten etter divisjonen a / b. 
     return b
 {% endhighlight %}
-</p>
+</p><!-- c\\] \\[%   og \\(c\\) -->
 
 I tallteori ønsker vi ofte å studere likninger på formen,
-\\[\tag 1 a\\cdot x + b\\cdot y = \\text{sff}(a, b),\\]
+\\[\tag 1 a\\cdot x + b\\cdot y = \\text{sff}(a, b),\\]  
 hvor \\(a\\) og \\(b\\) er heltall. Slike likninger kalles *lineære diofantiske likninger*, og det er heltallsløsningene vi er ute etter. 
 
-Legg merke til at hvis vil kan finne løsningen på den diofantiske likningen 
+Legg merke til at dersom vi kan finne løsningen på den diofantiske likningen 
 \\begin{equation}\\tag 2 b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b) ,\\end{equation}
 så kan vi bruke at
-\\[a \\ \\% \\ b = a - a \\  // \\ b \\quad \\text{ og at } \\quad  \\text{sff}(a, b)  = \\text{sff}(b, a \\ \\% \\ b). \\]
+\\[a \\ \\% \\ b = a - a \\  // \\ b \\quad \\text{og} \\quad  \\text{sff}(a, b)  = \\text{sff}(b, a \\ \\% \\ b). \\]
 
 Ved å sette dette inn i likning (2) får vi
 
@@ -38,7 +38,7 @@ Det (3) viser er at hvis vi kan finne en løsning til den diofantiske likningen
 \\[b\\cdot x + (a \\ \\% \\ b)\\cdot y = \\text{sff}(b, a \\ \\% \\ b), \\]
 så finner vi også en løsning til den originale diofantiske likningen (1). Igjen kan vi også legge merke til at vi kan gjenta denne prosessen så lenge vi ønsker. 
 
-Helt spesielt så kan vi gjenta denne prosessen fra koeffisienter (\\(a, b\\)) ned til koeffisienter \\((\\text{sff}(a, b), 0\\)). Men den diofantiske likningen med koeffisienter sff(\\(a, b\\)) og 0 har jo triviell løsning \\(x = 1\\) og \\(y = 0\\). Å løse diofantiske likninger ved å reversere denne prosessen er det som kalles den *utvidede Euklidske metode* og kan enkelt implementeres i Python rekursivt, som under.
+Helt spesielt så kan vi gjenta denne prosessen fra koeffisienter (\\(a,\\ b\\)) ned til koeffisienter \\((\\text{sff}(a,\\ b),\\ 0\\)). Men den diofantiske likningen med koeffisienter sff(\\(a, b\\)) og 0 har jo triviell løsning \\(x = 1\\) og \\(y = 0\\). Å løse diofantiske likninger ved å reversere denne prosessen er det som kalles den *utvidede Euklidske metode* og kan enkelt implementeres i Python rekursivt, som under.
 
 <p>
 {% highlight python linenos %}
@@ -49,7 +49,7 @@ def LosningAvDiofantiskLikningMedKoeffisienter(a, b):
         return a, 1, 0
     else:
         sff, x, y = LosningAvDiofantiskLikningMedKoeffisienter(b, a % b)
-    x, y = y, (x-(a // b) * y)
+    x, y = y, (x - (a // b) * y)
     return sff, x, y
 {% endhighlight %}
 </p>
