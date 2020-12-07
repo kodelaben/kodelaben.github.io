@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Hypersykloid"
+title:  "Hypersykloide"
 mathjax: true
 hidden: true
-permalink: /animasjoner/P5JS/hypersykloid/
+permalink: /animasjoner/P5JS/hypersykloide/
 ---
-I dette eksempelet skal vi forklare hvordan vi har gått frem for å lage animasjonen du ser under. Figuren som genereres er inspirert av en *hypersykloid* hvor den innerste sirkelen ikke nødvendigvis «ruller» på den ytterste sirkelen. Ved å trykke på animasjonene i de fire stegene blir du sendt til en ekstern side ([P5JS](https://editor.p5js.org/)) hvor koden er laget, slik at du kan se og eventuelt endre på koden.
+I dette eksempelet skal vi forklare hvordan vi har gått frem for å lage animasjonen du ser under. Figuren som genereres er inspirert av en *hypersykloide* hvor den innerste sirkelen ikke nødvendigvis «ruller» på den ytterste sirkelen. Ved å trykke på animasjonene i de fire stegene blir du sendt til en ekstern side ([P5JS](https://editor.p5js.org/)) hvor koden er laget, slik at du kan se og eventuelt endre på koden.
 
 <!-- TODO: Legg inn hyperlenker til p5js på bildene.  -->
 

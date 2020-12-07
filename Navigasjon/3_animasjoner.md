@@ -14,7 +14,7 @@ Her kan du navigere deg til grafiske animasjoner som vi har konstruert ved hjelp
 
 <!-- Under har vi lenket til noen animasjoner. Ved å klikke på lenken blir du sendt til en side hvor vi gjennomgår koden som ligger bak. Dette gjør vi steg for steg slik at man kan forstå hvordan koden er bygd opp. -->
 
-### [Rullende sirkel:]({% post_url P5JS/2020-09-30-Sirklersomruller %})
+### [Hypersykloide]({% post_url P5JS/2020-09-30-Sirklersomruller %})
 Her har vi laget en animasjon som "kartlegger" sporet av et punkt på en sirkel som ruller inne i en annen sirkel.
 
 <br>
