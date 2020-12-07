@@ -6,12 +6,12 @@
 #         a = a - b
 #     return a
 
-def EuklidsMetodeForFellesFaktorAv(a, b):
-    while a!= 0:
-        a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
-        a = a % b
-    return b
-print(EuklidsMetodeForFellesFaktorAv(5,15))
+# def EuklidsMetodeForFellesFaktorAv(a, b):
+#     while a!= 0:
+#         a, b = max(a, b), min(a, b) #Definerer x til å være den største av x og y.
+#         a = a % b
+#     return b
+# print(EuklidsMetodeForFellesFaktorAv(5,15))
 # def EM1(a, b):
 #     likninger = [] # Her lagrer vi alle likningene våre som lister
 #     while True:
@@ -58,12 +58,21 @@ def RekursivLosningAvDiofantiskLikningMedKoeffisienter(a, b):
         # kan vi bruke at (a % b) = a - (a // b) * b.
         # Dermed er 
         # ssf(a,b) = a* y + b* (x - (a // b) * y )
-        print(f"{a} = {b} * {a // b} + {a % b}")
+        print(f"{a} = {b} · {a // b} + {a % b}")
         sff, x, y = RekursivLosningAvDiofantiskLikningMedKoeffisienter(b, a % b)
-        print(f"{sff} = {a} * {y} + {b} * ({x} - ({a // b}) * {y})")
+        # print(f"{sff} = {a} · {y} + {b} · ({x} - ({a // b}) · {y})")
         x, y = y, (x-(a // b) * y)
-        print(f"{sff} = {a} * {x} + {b} *{y}")
+        print(f"{sff} = {a} · {x} + {b} · {y}")
         return sff, x, y
     
-RekursivLosningAvDiofantiskLikningMedKoeffisienter(1023412427, 7212412419)
+RekursivLosningAvDiofantiskLikningMedKoeffisienter(1027, 729)
 
+# def LosningAvDiofantiskLikningMedKoeffisienter(a, b):
+#     if a < b:
+#         return LosningAvDiofantiskLikningMedKoeffisienter(b, a)
+#     if (b == 0):
+#         return a, 1, 0
+#     else:
+#         sff, x, y = LosningAvDiofantiskLikningMedKoeffisienter(b, a % b)
+#     x, y = y, (x - (a // b) * y)
+#     return sff, x, y
