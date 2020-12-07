@@ -3,7 +3,7 @@ layout: post
 title:  "Innstikksortering"
 mathjax: true
 hidden: true
-permalink: /animasjoner/insertion/
+permalink: /animasjoner/innstikksortering/
 ---
 
 

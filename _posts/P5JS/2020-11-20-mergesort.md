@@ -3,7 +3,7 @@ layout: post
 title:  "Flettesortering"
 mathjax: true
 hidden: true
-permalink: /animasjoner/merge/
+permalink: /animasjoner/flettesortering/
 ---
 
 *Flettesortering* er en algoritme for å sortere mengder som går under [splitt og hersk algoritmer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm#:~:text=In%20computer%20science%2C%20divide%20and,enough%20to%20be%20solved%20directly.){:target="_blank"}. 

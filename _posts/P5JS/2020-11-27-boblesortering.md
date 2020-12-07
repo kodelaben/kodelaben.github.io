@@ -3,7 +3,7 @@ layout: post
 title:  "Boblesortering"
 mathjax: true
 hidden: true
-permalink: /animasjoner/P5JS/boblesortering
+permalink: /animasjoner/P5JS/boblesortering_forsoek
 ---
 <!-- TODO Manim animasjon og litt forklarende tekst og fikse P5JS. -->
 
