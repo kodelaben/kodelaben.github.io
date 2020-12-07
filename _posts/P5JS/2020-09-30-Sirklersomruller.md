@@ -215,3 +215,8 @@ function draw() {
 Dette kan for eksempel være en måte å illustrere hvordan resultatet blir hvis vi kombinerer trigonometriske funksjoner.
 
 <a href="https://editor.p5js.org/AndreMartiny/sketches/z44hGguSka" target="_blank"> <img src="/assets/images/Rullende-sirkler/graf1.gif" > </a>
+
+
+
+### Ekstra: Her har vi fortsatt med flere rullende sirkler inne i hverandre.
+<img src="/assets/images/Rullende-sirkler/output.gif" width="50%">
