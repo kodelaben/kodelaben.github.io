@@ -36,6 +36,11 @@ En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.
 
 <br>
 
+### [Innstikksortering]({% post_url P5JS/2020-11-20-insertionsort %})
+En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
+
+<br>
+
 ### [Diverse animasjoner i P5JS]({% post_url P5JS/2020-09-30-P5JS %})
 Ukategoriserte animasjoner laget i P5JS (JavaScript).
 
