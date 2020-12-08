@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Animasjoner
-permalink: /animasjoner.html
+permalink: /animasjoner
 ---
 
 ## **Under konstruksjon**
@@ -10,9 +10,10 @@ Her kan du navigere deg til grafiske animasjoner som vi har konstruert ved hjelp
 
 <br>
 
-<!-- Grafiske animasjoner/fremstillinger. a) Læringsformål (sinuskurven, visualisere algoritme, matematikken i fokus) b) «Kule animasjoner» hvor koden er i fokus. -->
+### [DFS Labyrint]({% post_url P5JS/mazes/2020-11-20-depth-first %})
+Labyrintgenerator ved bruk av backtracking.
 
-<!-- Under har vi lenket til noen animasjoner. Ved å klikke på lenken blir du sendt til en side hvor vi gjennomgår koden som ligger bak. Dette gjør vi steg for steg slik at man kan forstå hvordan koden er bygd opp. -->
+<br>
 
 ### [Hypersykloide]({% post_url P5JS/2020-09-30-Sirklersomruller %})
 Her har vi laget en animasjon som "kartlegger" sporet av et punkt på en sirkel som ruller inne i en annen sirkel.
