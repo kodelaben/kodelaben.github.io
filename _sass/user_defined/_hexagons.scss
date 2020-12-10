@@ -1,0 +1,173 @@
+$bredde: Min(15vmin, 150px);
+
+$font-size: calc(#{$bredde});
+$text-primary: #b6b6b6;
+$text-secondary: #ececec;
+$bg-primary: #23232e;
+$bg-secondary: #141418;
+$transition-speed: 600ms;
+
+
+body {
+  height: 100vh;
+}
+
+.biekube {
+  width: calc(5.5 * #{$bredde});
+  height: auto;
+  margin: auto;
+}
+
+.bierad {
+  width: calc(5.5 * #{$bredde});
+  height: calc(1.7613 * #{$bredde} + 0.1 * #{$bredde});
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sekskant,
+.sekskantmid,
+.sekskant-last {
+  position: relative;
+  background-color: rgb(65, 94, 150);
+  height: calc(1.75 * #{$bredde});
+  width: calc(#{$bredde}* 1);
+  z-index: 1;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    z-index: -1;
+  }
+  &::after {
+    transform: rotate(-60deg);
+  }
+  &::before {
+    transform: rotate(60deg);
+  }
+  &:hover {
+    background-color: rgb(14, 29, 61);
+  }
+  &:hover > .indre-sekskant {
+    opacity: 0.5;
+    .kom_i_gang {
+      transform: translate(0, calc(2.15 * #{$bredde}));
+    }
+    .oppgaver {
+      transform: translate(
+        calc(0.75 * 2.15 *#{$bredde}),
+        calc(0.6 * 2.15 * #{$bredde})
+      );
+    }
+    .matematiske_problemer {
+      transform: translate(
+        calc(-0.75 * 2.15 *#{$bredde}),
+        calc(0.6 * 2.15 * #{$bredde})
+      );
+    }
+    .animasjoner {
+      transform: translate(
+        calc(0.75 * 2.15 * #{$bredde}),
+        calc(-0.25 * 2.15 * #{$bredde})
+      );
+    }
+    .prosjekter {
+      transform: translate(
+        calc(-0.75 * 2.15 * #{$bredde} - 0.06 * #{$bredde}),
+        calc(-0.25 * 2.15 * #{$bredde})
+      );
+    }
+    .about {
+      transform: translate(calc(#{$bredde} * 9 / 27), calc(-1.45 * #{$bredde}));
+    }
+    .link-text-homepage {
+      opacity: 1;
+      transition-delay: $transition-speed / 2;
+    }
+  }
+}
+.link-text-homepage {
+  opacity: 0;
+  width: calc(2 *#{$bredde});
+  height: calc(#{$bredde});
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  white-space: nowrap;
+  font-size: calc( #{$bredde}* 0.28);
+  font-family: "Anton", sans-serif;
+  transform: translate(calc(#{$bredde}* -1.5 ), calc(0.38 *#{$bredde}));
+  transition: $transition-speed / 2 ease-in;
+  text-align: center;
+}
+
+.sekskant-last {
+  &:nth-child(odd) {
+    margin-top: 0vw;
+  }
+  .link-text-homepage {
+    transform: translate(calc( #{$bredde}* -0.875 ), calc(0.38 *#{$bredde}));
+  }
+}
+
+.sekskantmid {
+  opacity: 0;
+}
+
+.nav-link-homepage {
+  &:nth-child(odd) {
+    margin-top: calc(0.5 * 1.7613 * #{$bredde} + 0.05 * #{$bredde});
+  }
+}
+.nav-link-homepage, .nav-link-homepage1 {
+    color: #ececec;
+}
+
+.indre-sekskant {
+  height: 0;
+  .oppgaver {
+    transform: translate(0, calc(0.45 * #{$bredde}));
+    transition: $transition-speed ease-in-out;
+  }
+  .kom_i_gang {
+    transform: translate(0, calc(0.3 * #{$bredde}));
+    transition: $transition-speed ease-in-out;
+  }
+  .matematiske_problemer {
+    transform: translate(0, calc(0.35 * #{$bredde}));
+    transition: $transition-speed ease-in-out;
+  }
+  .animasjoner {
+    transform: translate(0, calc(0.35 * #{$bredde}));
+    transition: $transition-speed ease-in-out;
+  }
+  .prosjekter {
+    transform: translate(calc(-0.06 * #{$bredde}), calc(0.3 * #{$bredde}));
+    transition: $transition-speed ease-in-out;
+  }
+  .about {
+    height: #{$bredde};
+    transform: translate(calc(#{$bredde} * 9 / 27), calc(0.3 * #{$bredde}));
+    transition: $transition-speed ease-in-out;
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
