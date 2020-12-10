@@ -16,6 +16,7 @@ body {
   width: calc(5.5 * #{$bredde});
   height: auto;
   margin: auto;
+  padding-top: calc(0.05 * #{$bredde});
 }
 
 .bierad {
@@ -23,6 +24,7 @@ body {
   height: calc(1.7613 * #{$bredde} + 0.1 * #{$bredde});
   display: flex;
   justify-content: space-evenly;
+  
 }
 
 .sekskant,
