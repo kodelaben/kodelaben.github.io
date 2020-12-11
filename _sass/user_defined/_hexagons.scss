@@ -29,17 +29,20 @@ $transition-speed: 600ms;
 .sekskantmid,
 .sekskant-last {
   position: relative;
-  background-color: #1c4a75;
-  height: calc(1.75 * #{$bredde});
-  width: calc(#{$bredde}* 1);
+  background-color: #212c36;
+  height: calc(1.73 * #{$bredde});
+  width: calc(#{$bredde}*1.05);
+  border-radius: calc(0.1*#{$bredde});
   z-index: 1;
   &::before,
   &::after {
+    border-radius:inherit;
     position: absolute;
     content: "";
     width: inherit;
     height: inherit;
     background-color: inherit;
+    background: inherit;
     z-index: -1;
   }
   &::after {
@@ -49,7 +52,7 @@ $transition-speed: 600ms;
     transform: rotate(60deg);
   }
   &:hover {
-    background-color: rgb(14, 29, 61);
+    background-color: rgb(65, 65, 66);
   }
   &:hover > .indre-sekskant {
     opacity: 0.5;
