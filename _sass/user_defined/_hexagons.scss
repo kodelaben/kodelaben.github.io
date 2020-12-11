@@ -87,7 +87,7 @@ $transition-speed: 600ms;
       );
     }
     .about {
-      transform: translate(calc(#{$bredde} * 9 / 27), calc(-1.45 * #{$bredde}));
+      transform: translate(0, calc(-1.95 * #{$bredde}));
     }
     .link-text-homepage {
       opacity: 1;
@@ -117,7 +117,7 @@ $transition-speed: 600ms;
     margin-top: 0vw;
   }
   .link-text-homepage {
-    transform: translate(calc(#{$bredde}* -0.875), calc(0.38 *#{$bredde}));
+    transform: translate(calc(#{$bredde}* -0.5), calc(-1.20*#{$bredde}));
   }
 }
 
@@ -158,8 +158,8 @@ $transition-speed: 600ms;
     transition: $transition-speed ease-in-out;
   }
   .about {
+    padding-top: calc(0.5*#{$bredde});
     height: #{$bredde};
-    transform: translate(calc(#{$bredde} * 9 / 27), calc(0.3 * #{$bredde}));
     transition: $transition-speed ease-in-out;
   }
 }
