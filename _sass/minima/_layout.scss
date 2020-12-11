@@ -92,22 +92,20 @@ $transition-speed: 600ms;
 }
 
 .fa-primary {
-  color: #FFCB6B;
+  color: #FFBB00;
 }
 
 .fa-secondary {
-  color: #3a3dff;
+  color: #375e97;
 }
 
 .fa-tridinary {
-  color: #000152;
-  filter: grayscale(100%) opacity(0.3);
+  color: #d34a4a;
+}
+.fa-green {
+  color: #3f681c;
 }
 
-.fa-tridinary:hover {
-  color: #000152;
-  filter: grayscale(0%) opacity(1);
-}
 
 .fa-primary,
 .fa-secondary,
