@@ -186,7 +186,6 @@ a:active {
 }
 
 .test1 {
-  transform: translateX(-20px);
   animation: shifting 11s ease 0s infinite;
 }
 .test2 {
@@ -204,7 +203,7 @@ a:active {
   }
 
   50% {
-    transform: translateX(-20px);
+    transform: translateX(calc(-0.23 * #{$bredde}));
   }
   75% {
     transform: translateX(0px);
@@ -222,7 +221,7 @@ a:active {
     }
   
     50% {
-      transform: translateX(-20px);
+      transform: translateX(calc(-0.23 * #{$bredde}));
     }
     70% {
       transform: translateX(0px);
@@ -241,7 +240,7 @@ a:active {
     }
   
     50% {
-      transform: translateX(20px);
+      transform: translateX(calc(0.2 * #{$bredde}));
     }
     70% {
       transform: translateX(0px);
