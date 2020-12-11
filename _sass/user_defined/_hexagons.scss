@@ -8,15 +8,15 @@ $bg-secondary: #141418;
 $transition-speed: 600ms;
 
 
-body {
-  height: 100vh;
-}
-
 .biekube {
   width: calc(5.5 * #{$bredde});
-  height: auto;
+  height: 80vh;
   margin: auto;
-  padding-top: calc(0.05 * #{$bredde});
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  // padding-top: 50%;
 }
 
 .bierad {
@@ -24,7 +24,6 @@ body {
   height: calc(1.7613 * #{$bredde} + 0.1 * #{$bredde});
   display: flex;
   justify-content: space-evenly;
-  
 }
 
 .sekskant,
@@ -90,6 +89,7 @@ body {
       transition-delay: $transition-speed / 2;
     }
   }
+  transition: $transition-speed;
 }
 .link-text-homepage {
   opacity: 0;
