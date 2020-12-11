@@ -7,6 +7,11 @@ $bg-primary: #23232e;
 $bg-secondary: #141418;
 $transition-speed: 600ms;
 
+.text-primary {
+  background-color: $text-primary;
+  fill: $text-primary;
+}
+
 
 .biekube {
   width: calc(5.5 * #{$bredde});
@@ -55,7 +60,6 @@ $transition-speed: 600ms;
     background-color: rgb(65, 65, 66);
   }
   &:hover > .indre-sekskant {
-    opacity: 0.5;
     .kom_i_gang {
       transform: translate(0, calc(2.15 * #{$bredde}));
     }
@@ -174,4 +178,10 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+
+.bg-primary {
+  background-color: $bg-primary;
+  fill: $bg-primary;
 }
