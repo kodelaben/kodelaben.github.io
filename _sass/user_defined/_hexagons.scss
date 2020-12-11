@@ -146,7 +146,7 @@ $transition-speed: 600ms;
     transition: $transition-speed ease-in-out;
   }
   .matematiske_problemer {
-    transform: translate(0, calc(0.35 * #{$bredde}));
+    transform: translate(calc(#{$bredde}*.02), calc(0.35 * #{$bredde}));
     transition: $transition-speed ease-in-out;
   }
   .animasjoner {
@@ -185,3 +185,68 @@ a:active {
   fill: $bg-primary;
 }
 
+.test1 {
+  transform: translateX(-20px);
+  animation: shifting 11s ease 0s infinite;
+}
+.test2 {
+  animation: shifting2 9s ease 2s infinite;
+}
+.test3 {
+    animation: shifting3 7s ease 2s infinite;
+  }
+@keyframes shifting {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes shifting2 {
+    0% {
+      transform: translateX(0px);
+    }
+    30% {
+      transform: translateX(0px);
+    }
+  
+    50% {
+      transform: translateX(-20px);
+    }
+    70% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes shifting3 {
+    0% {
+      transform: translateX(0px);
+    }
+    30% {
+      transform: translateX(0px);
+    }
+  
+    50% {
+      transform: translateX(20px);
+    }
+    70% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
