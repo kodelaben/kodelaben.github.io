@@ -120,7 +120,7 @@ $transition-speed: 600ms;
     margin-top: 0vw;
   }
   .link-text-homepage {
-    transform: translate(calc(#{$bredde}* -0.5), calc(-1.20*#{$bredde}));
+    transform: translate(calc(#{$bredde}* -1.5), calc(0.350*#{$bredde}));
   }
 }
 
