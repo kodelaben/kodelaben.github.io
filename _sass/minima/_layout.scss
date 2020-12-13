@@ -279,7 +279,8 @@ $transition-speed: 600ms;
  * Site footer
  */
 
-.site-footer {
+.site-footer, 
+.homepage-site-footer {
   border-top: 1px solid $border-color-01;
   padding: 1rem;
 }
@@ -288,6 +289,9 @@ $transition-speed: 600ms;
 @media only screen and (max-width: 1000px) {
   .site-footer {
     padding-left: 5rem;
+  }
+  .homepage-site-footer {
+    padding-left: 0;
   }
 }
 /* Big screens */
