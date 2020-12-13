@@ -1,6 +1,5 @@
 ---
 ---
-
 @import "main";
 $bredde: Min(13vmin, 118px);
 
@@ -117,6 +116,7 @@ $transition-speed: 600ms;
 
 .sekskantmid {
   opacity: 0;
+  z-index: -1;
 }
 
 .nav-link-homepage {
