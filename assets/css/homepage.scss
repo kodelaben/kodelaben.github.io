@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "main";
 $bredde: Min(13vmin, 118px);
 
@@ -22,7 +23,6 @@ $transition-speed: 600ms;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  // padding-top: 50%;
 }
 
 .bierad {
@@ -90,7 +90,7 @@ $transition-speed: 600ms;
       );
     }
     .about {
-      transform: translate(0, calc(-1.95 * #{$bredde}));
+      transform: translate(0, calc(-1.5 * #{$bredde}));
     }
     .link-text-homepage {
       opacity: 1;
@@ -115,15 +115,6 @@ $transition-speed: 600ms;
   text-align: center;
 }
 
-.sekskant-last {
-  &:nth-child(odd) {
-    margin-top: 0vw;
-  }
-  .link-text-homepage {
-    transform: translate(calc(#{$bredde}* -1.5), calc(0.350*#{$bredde}));
-  }
-}
-
 .sekskantmid {
   opacity: 0;
 }
@@ -133,8 +124,7 @@ $transition-speed: 600ms;
     margin-top: calc(0.5 * 1.7613 * #{$bredde} + 0.05 * #{$bredde});
   }
 }
-.nav-link-homepage,
-.nav-link-homepage1 {
+.nav-link-homepage{
   color: #ececec;
 }
 
@@ -149,7 +139,7 @@ $transition-speed: 600ms;
     transition: $transition-speed ease-in-out;
   }
   .matematiske_problemer {
-    transform: translate(calc(#{$bredde}*.02), calc(0.35 * #{$bredde}));
+    transform: translate(calc(#{$bredde}* 0.02), calc(0.35 * #{$bredde}));
     transition: $transition-speed ease-in-out;
   }
   .animasjoner {
@@ -161,8 +151,7 @@ $transition-speed: 600ms;
     transition: $transition-speed ease-in-out;
   }
   .about {
-    padding-top: calc(0.5*#{$bredde});
-    height: #{$bredde};
+    transform: translate(calc(-.00 * #{$bredde}), calc(0.3 * #{$bredde}));
     transition: $transition-speed ease-in-out;
   }
 }
@@ -195,8 +184,8 @@ a:active {
   animation: shifting2 9s ease 2s infinite;
 }
 .test3 {
-    animation: shifting3 7s ease 2s infinite;
-  }
+  animation: shifting3 7s ease 2s infinite;
+}
 @keyframes shifting {
   0% {
     transform: translateX(0px);
@@ -216,39 +205,62 @@ a:active {
   }
 }
 @keyframes shifting2 {
-    0% {
-      transform: translateX(0px);
-    }
-    30% {
-      transform: translateX(0px);
-    }
-  
-    50% {
-      transform: translateX(calc(-0.23 * #{$bredde}));
-    }
-    70% {
-      transform: translateX(0px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(0px);
   }
 
-  @keyframes shifting3 {
-    0% {
-      transform: translateX(0px);
-    }
-    30% {
-      transform: translateX(0px);
-    }
-  
-    50% {
-      transform: translateX(calc(0.2 * #{$bredde}));
-    }
-    70% {
-      transform: translateX(0px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
+  50% {
+    transform: translateX(calc(-0.23 * #{$bredde}));
   }
+  70% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shifting3 {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(calc(0.2 * #{$bredde}));
+  }
+  70% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+// .prosjekter-rotasjon3 {
+//     animation: prosjekter-rotasjon3 12s ease 2s infinite;
+// }
+
+// @keyframes prosjekter-rotasjon3{
+//     0% {
+//       transform: translateX(0px);
+//     }
+//     30% {
+//       transform: translateX(0px);
+//     }
+
+//     50% {
+//       transform: translateX(calc(0.2 * #{$bredde}));
+//     }
+//     70% {
+//       transform: translateX(0px);
+//     }
+//     100% {
+//       transform: translateX(0px);
+//     }
+//   }
