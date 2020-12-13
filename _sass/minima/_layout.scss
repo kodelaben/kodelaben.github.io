@@ -279,17 +279,20 @@ $transition-speed: 600ms;
  * Site footer
  */
 
+.site-footer {
+  border-top: 1px solid $border-color-01;
+  padding: 1rem;
+}
+
 /* Small screens */
 @media only screen and (max-width: 1000px) {
-  .footer-col-wrapper {
+  .site-footer {
     padding-left: 5rem;
   }
 }
 /* Big screens */
 @media only screen and (min-width: 1000px) {
-  .footer-col-wrapper {
-    border-top: 1px solid $border-color-01;
-    padding: 1rem;
+  .site-footer {
     white-space: nowrap;
   }
 }
