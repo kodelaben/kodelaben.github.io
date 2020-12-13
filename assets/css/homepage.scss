@@ -33,7 +33,8 @@ $transition-speed: 600ms;
 }
 
 .sekskant,
-.sekskantmid {
+.sekskantmid,
+.sekskant-last {
   position: relative;
   background-color: #212c36;
   height: calc(1.73 * #{$bredde});
@@ -89,7 +90,7 @@ $transition-speed: 600ms;
       );
     }
     .about {
-      transform: translate(0, calc(-1.45 * #{$bredde}));
+      transform: translate(0, calc(-1.95 * #{$bredde}));
     }
     .link-text-homepage {
       opacity: 1;
@@ -114,6 +115,15 @@ $transition-speed: 600ms;
   text-align: center;
 }
 
+.sekskant-last {
+  &:nth-child(odd) {
+    margin-top: 0vw;
+  }
+  .link-text-homepage {
+    transform: translate(calc(#{$bredde}* -1.5), calc(0.350*#{$bredde}));
+  }
+}
+
 .sekskantmid {
   opacity: 0;
 }
@@ -123,7 +133,8 @@ $transition-speed: 600ms;
     margin-top: calc(0.5 * 1.7613 * #{$bredde} + 0.05 * #{$bredde});
   }
 }
-.nav-link-homepage {
+.nav-link-homepage,
+.nav-link-homepage1 {
   color: #ececec;
 }
 
@@ -150,7 +161,8 @@ $transition-speed: 600ms;
     transition: $transition-speed ease-in-out;
   }
   .about {
-    transform: translate(0, calc(0.4 * #{$bredde}));
+    padding-top: calc(0.5*#{$bredde});
+    height: #{$bredde};
     transition: $transition-speed ease-in-out;
   }
 }
