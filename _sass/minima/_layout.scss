@@ -280,16 +280,16 @@ $transition-speed: 600ms;
  */
 
 /* Small screens */
-@media only screen and (max-width: 600px) {
-  .site-footer {
-    padding-left: 0;
+@media only screen and (max-width: 1000px) {
+  .footer-col-wrapper {
+    padding-left: 5rem;
   }
 }
 /* Big screens */
-@media only screen and (min-width: 600px) {
-  .site-footer {
+@media only screen and (min-width: 1000px) {
+  .footer-col-wrapper {
     border-top: 1px solid $border-color-01;
-    padding: 1rem 0;
+    padding: 1rem;
     white-space: nowrap;
   }
 }
@@ -309,12 +309,16 @@ $transition-speed: 600ms;
 }
 
 .footer-col-wrapper,
+.homepage-footer-col-wrapper,
 .social-links {
   @include relative-font-size(0.9375);
   color: $brand-color;
-  margin-left: 5rem;
   white-space: initial;
+  display: flex;
+  justify-content: center;
 }
+
+
 
 .footer-col {
   margin-bottom: $spacing-unit / 5;
