@@ -4,9 +4,9 @@ title: Animasjoner
 permalink: /animasjoner
 ---
 
-## **Under konstruksjon**
+### [Sorteringsalgoritmer]({% post_url P5JS/sortering/2020-09-30-sortering %})
 
-Her kan du navigere deg til grafiske animasjoner som vi har konstruert ved hjelp av programmering. 
+En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
 
 <br>
 
@@ -26,22 +26,8 @@ Her har vi laget en animasjon som baserer seg på å tegne opp en gangetabell i 
 
 <br>
 
-### [Flettesortering]({% post_url P5JS/2020-11-20-mergesort %})
-En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
-
-<br>
-
-### [Boblesortering]({% post_url P5JS/2020-11-20-bubblesort %})
-En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
-
-<br>
-
-### [Innstikksortering]({% post_url P5JS/2020-11-20-insertionsort %})
-En sorteringsalgoritme animert med Python-biblioteket [Manim](https://www.manim.community/){:target="_blank"}
-
-<br>
-
 ### [Diverse animasjoner i P5JS]({% post_url P5JS/2020-09-30-P5JS %})
 Ukategoriserte animasjoner laget i P5JS (JavaScript).
 
 <br>
+
