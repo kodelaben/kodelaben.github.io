@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Matematiske problemer
-permalink: /matematiske_problemer.html
+permalink: /matematiske_problemer
 ---
 
 Programmering kan brukes for å løse matematiske problemer og er spesielt effektivt hvis teknikken som benyttes tar utgangspunkt i en algoritmisk fremgangsmåte. 

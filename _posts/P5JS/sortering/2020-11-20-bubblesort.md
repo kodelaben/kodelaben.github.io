@@ -3,7 +3,7 @@ layout: post
 title:  "Boblesortering"
 mathjax: true
 hidden: true
-permalink: /animasjoner/boblesortering/
+permalink: /animasjoner/sortering/boble/
 ---
 
 *Boblesortering* er en enkel sorteringsalgoritme som går inn i en liste, sammenlikner naboelementer og bytter plass på dem hvis de står feil i forhold til hverandre. Algoritmen gjentas helt til lista er sortert. Videoen under illustrer hvordan algoritmen jobber seg gjennom en liste med tall for å sortere dem i stigende rekkefølge.

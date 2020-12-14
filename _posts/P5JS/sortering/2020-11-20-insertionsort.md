@@ -3,7 +3,7 @@ layout: post
 title:  "Innstikksortering"
 mathjax: true
 hidden: true
-permalink: /animasjoner/innstikksortering/
+permalink: /animasjoner/sortering/innstikk/
 ---
 
 *Innstikksortering* er en sorteringsalgoritme som sorterer en liste i stigende rekkefølge. Algoritmen tar ett element av gangen, sammenlikner det med elementet til venstre og bytter plass på dem hvis de står feil i forhold til hverandre. Hvis det ikke er nødvendig å bytte plass på to elementer, kan vi med sikkerhet vite at lista frem til posisjonen vi startet med er sortert riktig. Prosessen gjentas helt til vi har vært gjennom alle elementene i lista. Videoen under illustrer hvordan algoritmen jobber seg gjennom en liste med tall.
