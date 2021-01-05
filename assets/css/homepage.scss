@@ -152,7 +152,7 @@ $transition-speed: 600ms;
     transition: $transition-speed ease-in-out;
   }
   .about {
-    transform: translate(calc(-0 * #{$bredde}), calc(0.3 * #{$bredde}));
+    transform: translate(calc(-0 * #{$bredde}), calc(0.35 * #{$bredde}));
     transition: $transition-speed ease-in-out;
   }
 }
