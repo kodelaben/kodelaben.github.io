@@ -79,13 +79,13 @@ $transition-speed: 600ms;
     }
     .animasjoner {
       transform: translate(
-        calc(0.75 * 2.15 * #{$bredde}),
+        calc(-0.75 * 2.15 * #{$bredde}),
         calc(-0.25 * 2.15 * #{$bredde})
       );
     }
     .prosjekter {
       transform: translate(
-        calc(-0.75 * 2.15 * #{$bredde} - 0.06 * #{$bredde}),
+        calc(0.75 * 2.15 * #{$bredde} - 0.06 * #{$bredde}),
         calc(-0.25 * 2.15 * #{$bredde})
       );
     }
