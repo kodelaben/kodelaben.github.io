@@ -6,7 +6,7 @@ hidden: true
 permalink: /animasjoner/separator/
 ---
 
-<div style="text-align:center;">
+<div >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
     <script src="/assets/p5js/tyngdekraftseparator/partikkel.js"></script> 
@@ -14,7 +14,7 @@ permalink: /animasjoner/separator/
     <div id="canvasForHTML"></div>
 </div>
 
-<div class="slidecontainer">
+<div class="slidecontainer" style="justify-content:left">
   <input type="range" min="1"  max="4" step ="0.001" value="1" class="slider" id="myRange"  style= "width: 720px">
 </div>
  <p id = "slider-tekst-sudoku">Vannstrømm<span id="sudokuspan"></span></p>
