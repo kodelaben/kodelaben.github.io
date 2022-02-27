@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: hiddenlayout
 title:  "Tyngdekraftseparator"
 mathjax: true
 hidden: true
