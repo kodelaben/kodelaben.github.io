@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/eventmachine/eventmachine.git
+  revision: 9cb13a8a62363df5ebcc414169a3deb2c1608528
+  tag: v1.2.7
+  specs:
+    eventmachine (1.2.7)
+
+GIT
   remote: https://github.com/jekyll/minima
   revision: a98a8fed7203738991b98d4f90a80dec3ebcf4f7
   specs:
@@ -12,12 +19,13 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.16)
     colorator (1.1.0)
     concurrent-ruby (1.1.7)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    eventmachine (1.2.7-x64-mingw32)
+    ffi (1.13.1)
     ffi (1.13.1-x64-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
@@ -67,6 +75,8 @@ GEM
     rexml (3.2.4)
     rouge (3.25.0)
     safe_yaml (1.0.5)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     terminal-table (1.8.0)
@@ -78,17 +88,22 @@ GEM
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
     wdm (0.1.1)
+    webrick (1.7.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt (= 3.1.16)
+  eventmachine (= 1.2.7)!
   jekyll-paginate
   jekyll-sitemap
   minima!
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
+  webrick (= 1.7.0)
 
 BUNDLED WITH
-   2.1.4
+   2.3.8
