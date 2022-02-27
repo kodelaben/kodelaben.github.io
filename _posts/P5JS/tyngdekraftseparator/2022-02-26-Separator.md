@@ -17,6 +17,6 @@ permalink: /animasjoner/separator/
 <div class="slidecontainer" style="justify-content:left">
   <input type="range" min="1"  max="4" step ="0.001" value="1" class="slider" id="myRange"  style= "width: 720px">
 </div>
- <p >Vannstrømm<span></span></p>
+ <p >Strøm<span></span></p>
 <script src="/assets/p5js/tyngdekraftseparator/slider.js"></script> 
 
