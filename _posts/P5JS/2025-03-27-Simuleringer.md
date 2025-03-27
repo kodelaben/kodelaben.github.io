@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Simuleringer"
+title:  "Diverse simuleringer"
 mathjax: true
 hidden: true
+permalink: /animasjoner/simuleringer/
 ---
 
-## Her er eksempler på simuleringer
+### [Trekke kule fra pose]({% post_url P5JS/simuleringer/2025-03-27-kuletrekk %})
 
-#### Trekk av kuler fra pose
-<iframe src="https://editor.p5js.org/HenrikN/full/vB5eKGhX4" width="800" height="1000" frameBorder="0"></iframe>
+
+<br>
+
