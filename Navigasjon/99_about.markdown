@@ -6,7 +6,7 @@ permalink: /om_siden
 
 Innholdet på siden er produsert av [André Martiny](https://www.uia.no/kk/profil/andrem) og [Henrik L. Njølstad](https://www.inn.no/finn-en-ansatt/henrik-njolstad.html).
 * André har en doktorgrad i matematikk fra Universitetet i Agder (UiA) og jobber i dag som førsteamanuensis i matematikk ved UiA. 
-* Henrik er utdannet lektor med master i matematikkdidaktikk og jobber i dag som høgskolelektor ved institutt for matematikk, naturfag og kroppsøving ved Høgskolen i Innlandet.
+* Henrik er utdannet lektor med master i matematikkdidaktikk og jobber i dag som universitetslektor ved institutt for matematikk, naturfag og kroppsøving ved Universitetet i Innlandet.
 
 ### Kom i gang
 Vi har laget en trinnvis veiledning for hvordan du kan installere Python og VS Code (kodeeditor). Se den [her]({% link Navigasjon/1_kom_i_gang.md %}) hvis du er interessert i å komme i gang med programmering i Python.
