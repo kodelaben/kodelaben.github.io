@@ -31,3 +31,7 @@ Ukategoriserte animasjoner laget i P5JS (JavaScript).
 
 <br>
 
+### [Simuleringer]({% post_url P5JS/2025-03-27-Simuleringer %})
+Diverse simuleringer
+
+<br>
